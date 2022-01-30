@@ -44,7 +44,19 @@ echo $rootPassword | su -c 'sh '$workingDir'/add_user.sh "'$executingUser'" "'$p
 read -p "Enter administrator user2 : " user2
 read -p "Enter administrator pwd2 : " pwd2
 echo $rootPassword | su -c 'sh '$workingDir'/add_user.sh "'$user2'" "'$pwd2'" "y" "'$rootPassword'"'
- 
+#add the right repositories
+aptContents="deb http://deb.debian.org/debian/ bullseye main
+deb-src http://deb.debian.org/debian/ bullseye main
+
+deb http://security.debian.org/debian-security bullseye-security main contrib
+deb-src http://security.debian.org/debian-security bullseye-security main contrib
+
+deb http://deb.debian.org/debian/ bullseye-updates main contrib
+deb-src http://deb.debian.org/debian/ bullseye-updates main contrib
+"
+echo "${aptContents}" > sources.list
+echo $rootPassword | su -c 'mv sources.list /etc/apt/sources.list'
+
 # invoke checkPackageList and store its result to $out variable
 checkPackageList "${packagesAsRequirements}"
 returnVal=$(echo $?)
@@ -94,6 +106,19 @@ wget -q https://www.virtualbox.org/download/oracle_vbox_2016.asc -O- | sudo apt-
 wget -q https://www.virtualbox.org/download/oracle_vbox.asc -O- | sudo apt-key add -
 echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
 sudo apt update
+sudo apt install virtualbox-6.1 -y
+checkPackageList "virtualbox-6.1"
+returnVal=$(echo $?)
+echo $returnVal
+ 
+if [ "$returnVal" == 0 ]
+then 
+     prog "100" "Installation cannot continue. Packages virtualbox-6.1 are not installed" "0"
+     exit 1
+else
+     prog "65" "3.- Installation Packages virtualbox-6.1 are correctlly installed" "1"
+fi
+
 prog "70" "8.- Vagrant up" "1"
 
  
