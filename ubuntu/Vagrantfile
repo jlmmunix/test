@@ -39,9 +39,7 @@ Vagrant.configure("2") do |config|
 
   # Share an additional folder to the guest VM. The first argument is
   # the path on the host to the actual folder. 
-  config.vm.synced_folder "/home/dev01/vagrant/jadesystems", "/home/vagrant/Download"
-  #h.vm.disk :disk, size: "50GB", primary: true
-  #config.vm.disk :disk, size: "500GB", primary: true
+  config.vm.synced_folder "~/vagrant/jadesystems", "/home/vagrant/Download"
   config.disksize.size = '1000GB'
   #config.ssh.password = "vagrant"
   #config.ssh.insert_key = false
