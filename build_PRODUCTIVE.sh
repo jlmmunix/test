@@ -3,6 +3,8 @@
 # Build PRODUCTIVE Server BETHUNDER Systems GmbH
 # Author Jose Munoz
 workingDir=$(pwd)
+executingUser=$(whoami)
+ 
 deployVagrantDirectory=~/$1
 packagesAsRequirements="wget git openssh-server openssh-client zip geany"
 vagrantPluginsAsRequirements="vagrant-disksize"
@@ -36,13 +38,13 @@ prog "6" "2.- be root and install packages requirements wget, git, ssh client an
 echo 'sh '$vagrantDirectory'/add_user.sh "$user1" "$pwd1" "y"'
 
 echo $rootPassword | su -c "apt install ${packagesAsRequirements} -y"
-read -p "Enter administrator user1 : " user1
-read -p "Enter administrator pwd1 : " pwd1
-echo $rootPassword | su -c 'sh '$vagrantDirectory'/add_user.sh "'$user1'" "'$pwd1'" "y" "'$rootPassword'"'
+#read -p "Enter administrator user1 : " user1
+read -p "Enter administrator "$executingUser" pwd : " pwd1
+echo $rootPassword | su -c 'sh '$workingDir'/add_user.sh "'$executingUser'" "'$pwd1'" "y" "'$rootPassword'"'
 read -p "Enter administrator user2 : " user2
 read -p "Enter administrator pwd2 : " pwd2
-echo $rootPassword | su -c 'sh '$vagrantDirectory'/add_user.sh "'$user2'" "'$pwd2'" "y" "'$rootPassword'"'
-
+echo $rootPassword | su -c 'sh '$workingDir'/add_user.sh "'$user2'" "'$pwd2'" "y" "'$rootPassword'"'
+ 
 # invoke checkPackageList and store its result to $out variable
 checkPackageList "${packagesAsRequirements}"
 returnVal=$(echo $?)
