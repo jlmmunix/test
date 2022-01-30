@@ -12,7 +12,6 @@ echo "$workingDir"
 #$rootPassword=$rootPassword
 . $workingDir/headers.sh #include usefull functions "$@"
 
-
 if [ ! -d "$deployVagrantDirectory" ]; then
   myprint "deployVagrantDirectory: $deployVagrantDirectory does not exist. deployVagrantDirectory will be created" 
   mkdir -p ${deployVagrantDirectory}

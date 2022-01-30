@@ -115,7 +115,7 @@ installPackageURLMethod(){
 	local packageName=$1
 	local urlPackage=$2
 	local urlForceInstall=$3
-	local install=false
+	local install=true
 	local FILE="${urlPackage##*/}"
 	echo $FILE
 	local FILE_WITH_PATH="/tmp/debs/${FILE}"
@@ -129,20 +129,24 @@ installPackageURLMethod(){
 	ls 
 	sudo rm -rf "${FILE_WITH_PAH}*"
 	ls
-    dpkg -l | grep $packageName >/dev/null
+	#echo "TEST"
+	echo "${packageName}"
+        #dpkg -l | grep "${packageName}" >/dev/null
+        dpkg -l | grep $packageName >/dev/null
 	if [ $? -eq 0 ]; then
 		myprintGreen "$packageName already installed!"
-		install=true
+		install=false
 		if [ $urlForceInstall = "y" ]; then 
 			myprint "Forcing installation of packageName: "$packageName 
 			install=true
 		fi	
 		if [ $urlForceInstall != "y" ]; then 
 			myprintWarning "Installation of packageName: "$packageName" was cancelled."
-			install=false
 		fi				
-	fi	
-    if [ "$install" = true ]; then 
+	fi
+	#echo "TEST2"	
+	#echo "${install}"
+        if [ "$install" = true ]; then 
 		wget $urlPackage
 		FILE="${urlPackage##*/}"
 		if test -f "$FILE"; then
@@ -153,7 +157,7 @@ installPackageURLMethod(){
 		ls
 		rm -rf "${FILE}"
 		ls
-    fi 	    
+       fi 	    
 
 
 }
