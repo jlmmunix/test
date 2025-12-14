@@ -1,6 +1,6 @@
 # Batch Improved Icons
 
-A collection of 17 professionally designed icons with a modern, clean aesthetic. Each icon is available in both SVG and PNG formats.
+A collection of 30 professionally designed icons with a modern, clean aesthetic. Each icon is available in both SVG and PNG formats.
 
 ## 📦 What's Included
 
@@ -14,6 +14,9 @@ A collection of 17 professionally designed icons with a modern, clean aesthetic.
 
 | Icon Name | Filename | Description |
 |-----------|----------|-------------|
+| Chat Lock | `CHAT_LOCK.png` | Secure messaging with lock badge |
+| Chevron Left | `CHEVRON_LEFT.png` | Left navigation arrow |
+| Chevron Right | `CHEVRON_RIGHT.png` | Right navigation arrow |
 | Close Window | `CLOSE_WINDOW.png` | Red circular close button with X |
 | Company Devices | `COMPANY_DEVICES.png` | Monitor/screen with checkmark badge |
 | Company Processes | `COMPANY_PROCESSES.png` | Network diagram with connected nodes |
@@ -28,9 +31,21 @@ A collection of 17 professionally designed icons with a modern, clean aesthetic.
 | Deploy Process | `DEPLOY_PROCESS.png` | Checkmark with radiating connections |
 | Deploy Single Process | `DEPLOY_SINGLE_PROCESS.png` | Square document with checkmark badge |
 | Deploy Single Process Alt | `DEPLOY_SINGLE_PROCESS1.png` | Green square with checkmark |
-| Execution Logs | `DEVICE_EXECUTION_LOGS.png` | Document with chart badge |
 | Device Info | `DEVICE_INFO.png` | Mobile device with info symbol |
 | Device IPs | `DEVICE_IPS.png` | Globe/network icon |
+| Devices Stack | `DEVICES_STACKED.png` | Layered devices in multiple colors |
+| Document Bars | `DOCUMENT_BARS.png` | Document with colored horizontal bars |
+| Edit Document | `EDIT_DOCUMENT.png` | Document with pencil editor badge |
+| Execution Logs | `DEVICE_EXECUTION_LOGS.png` | Document with chart badge |
+| Hierarchy | `HIERARCHY.png` | Organizational tree diagram |
+| Monitor Approved | `MONITOR_APPROVED.png` | Screen with approval checkmark |
+| Monitor Badge | `MONITOR_BADGE.png` | Monitor with success badge |
+| Monitor Check | `MONITOR_CHECK.png` | Monitor with centered checkmark |
+| Monitor Display | `MONITOR_DISPLAY.png` | Simple blue monitor display |
+| Monitor Plus | `MONITOR_PLUS.png` | Monitor with add/new icon |
+| Receipt | `RECEIPT.png` | Receipt/invoice with itemized rows |
+| Small Sparkle | `SPARKLE_SMALL.png` | Compact yellow sparkle |
+| Sparkle | `SPARKLE.png` | Large white sparkle with glow |
 
 ## 🚀 Quick Start
 
@@ -195,4 +210,4 @@ Each icon follows this structure:
 
 **Created**: December 2025  
 **Version**: 1.0  
-**Total Icons**: 17
+**Total Icons**: 30
