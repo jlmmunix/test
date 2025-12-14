@@ -501,6 +501,172 @@ const BatchImprovedIcons = () => {
           <line x1="18" y1="26" x2="31" y2="26" stroke="#66BB6A" strokeWidth="3.5" strokeLinecap="round"/>
         </svg>
       )
+    },
+    {
+      id: 'home-dashboard',
+      name: 'HOME_DASHBOARD.png',
+      label: 'Home Dashboard',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <path d="M20 4 L4 16 L8 16 L8 36 L16 36 L16 26 L24 26 L24 36 L32 36 L32 16 L36 16 Z" fill="#F97316" stroke="#EA580C" strokeWidth="2" strokeLinejoin="round"/>
+          <rect x="18" y="10" width="4" height="4" rx="0.5" fill="#FED7AA"/>
+          <circle cx="12" cy="22" r="1.5" fill="#FED7AA"/>
+          <circle cx="28" cy="22" r="1.5" fill="#FED7AA"/>
+        </svg>
+      )
+    },
+    {
+      id: 'font-lowercase',
+      name: 'FONT_LOWERCASE.png',
+      label: 'Font Lowercase',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <text x="20" y="30" fontSize="28" fontWeight="normal" fill="#FF9800" textAnchor="middle" fontFamily="Arial, sans-serif">a</text>
+        </svg>
+      )
+    },
+    {
+      id: 'font-uppercase',
+      name: 'FONT_UPPERCASE.png',
+      label: 'Font Uppercase',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <text x="20" y="30" fontSize="28" fontWeight="bold" fill="#DC2626" textAnchor="middle" fontFamily="Arial, sans-serif">B</text>
+        </svg>
+      )
+    },
+    {
+      id: 'font-bold',
+      name: 'FONT_BOLD.png',
+      label: 'Font Bold',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <text x="20" y="30" fontSize="28" fontWeight="900" fill="#DC2626" textAnchor="middle" fontFamily="Arial, sans-serif">B</text>
+        </svg>
+      )
+    },
+    {
+      id: 'shell-command',
+      name: 'SHELL_COMMAND.png',
+      label: 'Shell Command',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <text x="20" y="30" fontSize="24" fontWeight="bold" fontStyle="italic" fill="#EF5350" textAnchor="middle" fontFamily="monospace">sh</text>
+        </svg>
+      )
+    },
+    {
+      id: 'edit-file',
+      name: 'EDIT_FILE.png',
+      label: 'Edit File',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <path d="M6 6 L6 34 L28 34 L28 14 L20 6 Z" fill="#4CAF50" stroke="#388E3C" strokeWidth="2"/>
+          <path d="M20 6 L20 14 L28 14" fill="#66BB6A"/>
+          <line x1="10" y1="18" x2="24" y2="18" stroke="white" strokeWidth="2"/>
+          <line x1="10" y1="22" x2="24" y2="22" stroke="white" strokeWidth="2"/>
+          <line x1="10" y1="26" x2="20" y2="26" stroke="white" strokeWidth="2"/>
+          <path d="M24 22 L34 12 L32 10 L22 20 Z" fill="#FFA726"/>
+          <rect x="22" y="20" width="3" height="3" fill="#FFD54F"/>
+        </svg>
+      )
+    },
+    {
+      id: 'refresh-reload',
+      name: 'REFRESH_RELOAD.png',
+      label: 'Refresh Reload',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <path d="M32 12 L32 6 L26 6" stroke="#42A5F5" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M8 28 L8 34 L14 34" stroke="#42A5F5" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M32 6 C32 6 26 10 20 10 C12 10 6 16 6 24 C6 28 8 32 8 34" stroke="#42A5F5" strokeWidth="3" fill="none" strokeLinecap="round"/>
+          <path d="M8 34 C8 34 14 30 20 30 C28 30 34 24 34 16 C34 12 32 8 32 6" stroke="#42A5F5" strokeWidth="3" fill="none" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'sync-refresh',
+      name: 'SYNC_REFRESH.png',
+      label: 'Sync Refresh',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <circle cx="20" cy="20" r="16" fill="#66BB6A"/>
+          <circle cx="20" cy="20" r="12" fill="#81C784"/>
+          <path d="M20 8 C28 8 32 12 32 20" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round"/>
+          <path d="M28 8 L32 12 L28 16" fill="white"/>
+          <path d="M20 32 C12 32 8 28 8 20" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round"/>
+          <path d="M12 32 L8 28 L12 24" fill="white"/>
+        </svg>
+      )
+    },
+    {
+      id: 'save-file',
+      name: 'SAVE_FILE.png',
+      label: 'Save File',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <rect x="6" y="4" width="28" height="32" rx="2" fill="#42A5F5" stroke="#1976D2" strokeWidth="2"/>
+          <rect x="6" y="4" width="28" height="8" fill="#1976D2"/>
+          <rect x="26" y="4" width="8" height="8" fill="#0D47A1"/>
+          <rect x="10" y="20" width="20" height="14" rx="1" fill="white"/>
+          <line x1="16" y1="7" x2="22" y2="7" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'save-error',
+      name: 'SAVE_ERROR.png',
+      label: 'Save Error',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <rect x="6" y="4" width="28" height="32" rx="2" fill="#66BB6A" stroke="#388E3C" strokeWidth="2"/>
+          <rect x="6" y="4" width="28" height="8" fill="#388E3C"/>
+          <rect x="26" y="4" width="8" height="8" fill="#2E7D32"/>
+          <rect x="10" y="20" width="20" height="14" rx="1" fill="white"/>
+          <circle cx="32" cy="32" r="9" fill="#EF5350"/>
+          <path d="M28 28 L36 36 M36 28 L28 36" stroke="white" strokeWidth="3" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'magic-wand',
+      name: 'MAGIC_WAND.png',
+      label: 'Magic Wand',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <rect x="4" y="28" width="24" height="4" rx="1" fill="#AB47BC" transform="rotate(-45 16 30)"/>
+          <circle cx="28" cy="12" r="2" fill="#CE93D8"/>
+          <path d="M8 8 L9 11 L12 12 L9 13 L8 16 L7 13 L4 12 L7 11 Z" fill="#4DD0E1"/>
+          <path d="M32 6 L32.5 8 L34 8.5 L32.5 9 L32 11 L31.5 9 L30 8.5 L31.5 8 Z" fill="#FFEB3B"/>
+          <path d="M34 20 L34.5 22 L36 22.5 L34.5 23 L34 25 L33.5 23 L32 22.5 L33.5 22 Z" fill="#66BB6A"/>
+          <path d="M14 4 L14.5 6 L16 6.5 L14.5 7 L14 9 L13.5 7 L12 6.5 L13.5 6 Z" fill="#FFA726"/>
+        </svg>
+      )
+    },
+    {
+      id: 'search-find',
+      name: 'SEARCH_FIND.png',
+      label: 'Search Find',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <circle cx="18" cy="18" r="12" fill="none" stroke="#42A5F5" strokeWidth="3"/>
+          <circle cx="18" cy="18" r="8" fill="#E3F2FD"/>
+          <line x1="27" y1="27" x2="36" y2="36" stroke="#42A5F5" strokeWidth="4" strokeLinecap="round"/>
+          <circle cx="36" cy="36" r="2" fill="#1976D2"/>
+        </svg>
+      )
     }
   ];
 
