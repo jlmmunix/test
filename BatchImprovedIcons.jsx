@@ -667,6 +667,361 @@ const BatchImprovedIcons = () => {
           <circle cx="36" cy="36" r="2" fill="#1976D2"/>
         </svg>
       )
+    },
+    {
+      id: 'multi-deployment',
+      name: 'MULTI_DEPLOYMENT.png',
+      label: 'Multi Deploy [Ctrl+m]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="14" y="2" width="20" height="12" rx="1.5" fill="#66B2FF"/>
+          <line x1="24" y1="14" x2="24" y2="21" stroke="#4DD0E1" strokeWidth="3.5"/>
+          <line x1="4" y1="24" x2="44" y2="24" stroke="#4DD0E1" strokeWidth="3.5"/>
+          <line x1="4" y1="24" x2="4" y2="32" stroke="#4DD0E1" strokeWidth="3.5"/>
+          <line x1="24" y1="24" x2="24" y2="32" stroke="#4DD0E1" strokeWidth="3.5"/>
+          <line x1="44" y1="24" x2="44" y2="32" stroke="#4DD0E1" strokeWidth="3.5"/>
+          <rect x="0" y="32" width="8" height="12" rx="1.5" fill="#66BB6A"/>
+          <rect x="20" y="32" width="8" height="12" rx="1.5" fill="#66BB6A"/>
+          <rect x="40" y="32" width="8" height="12" rx="1.5" fill="#66BB6A"/>
+        </svg>
+      )
+    },
+    {
+      id: 'my-companies',
+      name: 'MY_COMPANIES.png',
+      label: 'Companies [Ctrl+u]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="2" y="10" width="18" height="34" fill="#AB47BC"/>
+          <rect x="4" y="14" width="3" height="4" fill="white"/>
+          <rect x="8" y="14" width="3" height="4" fill="white"/>
+          <rect x="12" y="14" width="3" height="4" fill="white"/>
+          <rect x="16" y="14" width="3" height="4" fill="white"/>
+          <rect x="4" y="20" width="3" height="4" fill="white"/>
+          <rect x="8" y="20" width="3" height="4" fill="white"/>
+          <rect x="12" y="20" width="3" height="4" fill="white"/>
+          <rect x="16" y="20" width="3" height="4" fill="white"/>
+          <rect x="4" y="26" width="3" height="4" fill="white"/>
+          <rect x="8" y="26" width="3" height="4" fill="white"/>
+          <rect x="12" y="26" width="3" height="4" fill="white"/>
+          <rect x="16" y="26" width="3" height="4" fill="white"/>
+          <rect x="4" y="32" width="3" height="4" fill="white"/>
+          <rect x="8" y="32" width="3" height="4" fill="white"/>
+          <rect x="12" y="32" width="3" height="4" fill="white"/>
+          <rect x="16" y="32" width="3" height="4" fill="white"/>
+          <rect x="24" y="4" width="22" height="40" fill="#CE93D8"/>
+          <rect x="27" y="8" width="4" height="5" fill="white"/>
+          <rect x="33" y="8" width="4" height="5" fill="white"/>
+          <rect x="39" y="8" width="4" height="5" fill="white"/>
+          <rect x="27" y="15" width="4" height="5" fill="white"/>
+          <rect x="33" y="15" width="4" height="5" fill="white"/>
+          <rect x="39" y="15" width="4" height="5" fill="white"/>
+          <rect x="27" y="22" width="4" height="5" fill="white"/>
+          <rect x="33" y="22" width="4" height="5" fill="white"/>
+          <rect x="39" y="22" width="4" height="5" fill="white"/>
+          <rect x="27" y="29" width="4" height="5" fill="white"/>
+          <rect x="33" y="29" width="4" height="5" fill="white"/>
+          <rect x="39" y="29" width="4" height="5" fill="white"/>
+          <rect x="27" y="36" width="4" height="5" fill="white"/>
+          <rect x="33" y="36" width="4" height="5" fill="white"/>
+          <rect x="39" y="36" width="4" height="5" fill="white"/>
+        </svg>
+      )
+    },
+    {
+      id: 'my-deployment-group-rel-devices',
+      name: 'MY_DEPLOYMENT_GROUP_REL_DEVICES.png',
+      label: 'Group Devices',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="6" y="4" width="36" height="40" rx="2" fill="none" stroke="#66B2FF" strokeWidth="3.5"/>
+          <rect x="10" y="10" width="28" height="6" fill="#66B2FF"/>
+          <line x1="12" y1="24" x2="36" y2="24" stroke="#4DD0E1" strokeWidth="2.5"/>
+          <line x1="12" y1="30" x2="32" y2="30" stroke="#4DD0E1" strokeWidth="2.5"/>
+          <line x1="12" y1="35" x2="34" y2="35" stroke="#4DD0E1" strokeWidth="2.5"/>
+          <circle cx="9" cy="24" r="2.5" fill="#66BB6A"/>
+          <circle cx="9" cy="30" r="2.5" fill="#66BB6A"/>
+          <circle cx="9" cy="35" r="2.5" fill="#66BB6A"/>
+        </svg>
+      )
+    },
+    {
+      id: 'my-deployment-groups',
+      name: 'MY_DEPLOYMENT_GROUPS.png',
+      label: 'Deploy Groups [Ctrl+g]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <path d="M24 4 L2 18 L8 18 L8 44 L18 44 L18 32 L30 32 L30 44 L40 44 L40 18 L46 18 Z" fill="#FF9800"/>
+          <rect x="12" y="22" width="6" height="8" fill="#F57C00"/>
+          <rect x="21" y="12" width="6" height="8" fill="#F57C00"/>
+          <rect x="30" y="22" width="6" height="8" fill="#F57C00"/>
+        </svg>
+      )
+    },
+    {
+      id: 'my-devices',
+      name: 'MY_DEVICES.png',
+      label: 'My Devices [Ctrl+d]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="4" y="6" width="20" height="16" rx="1.5" fill="#66B2FF"/>
+          <rect x="6" y="8" width="16" height="11" fill="#42A5F5"/>
+          <rect x="10" y="22" width="8" height="1.5" fill="#1976D2"/>
+          <rect x="12" y="23.5" width="4" height="2" rx="1" fill="#1976D2"/>
+          <rect x="28" y="8" width="16" height="28" rx="2.5" fill="#AB47BC"/>
+          <rect x="30" y="11" width="12" height="20" fill="#CE93D8"/>
+          <circle cx="36" cy="34" r="2" fill="white"/>
+          <rect x="10" y="32" width="8" height="6" rx="1" fill="#66BB6A"/>
+          <rect x="11" y="33" width="6" height="4" fill="#81C784"/>
+          <line x1="22" y1="32" x2="22" y2="38" stroke="#4DD0E1" strokeWidth="2"/>
+          <line x1="19" y1="35" x2="25" y2="35" stroke="#4DD0E1" strokeWidth="2"/>
+        </svg>
+      )
+    },
+    {
+      id: 'my-master-nodes',
+      name: 'MY_MASTER_NODES.png',
+      label: 'Master Nodes [F2]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <g>
+            <rect x="2" y="2" width="44" height="13" rx="2" fill="#FF9800"/>
+            <circle cx="8" cy="8.5" r="3" fill="#66BB6A"/>
+            <circle cx="15" cy="8.5" r="3" fill="#EF5350"/>
+            <circle cx="22" cy="8.5" r="3" fill="#FFEB3B"/>
+            <text x="30" y="12" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial">SERVER</text>
+          </g>
+          <g>
+            <rect x="2" y="17" width="44" height="13" rx="2" fill="#FF9800"/>
+            <circle cx="8" cy="23.5" r="3" fill="#66BB6A"/>
+            <circle cx="15" cy="23.5" r="3" fill="#66BB6A"/>
+            <circle cx="22" cy="23.5" r="3" fill="#66BB6A"/>
+            <text x="30" y="27" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial">SERVER</text>
+          </g>
+          <g>
+            <rect x="2" y="32" width="44" height="13" rx="2" fill="#FF9800"/>
+            <circle cx="8" cy="38.5" r="3" fill="#66BB6A"/>
+            <circle cx="15" cy="38.5" r="3" fill="#66BB6A"/>
+            <circle cx="22" cy="38.5" r="3" fill="#66BB6A"/>
+            <text x="30" y="42" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial">SERVER</text>
+          </g>
+        </svg>
+      )
+    },
+    {
+      id: 'my-master-node-shared-folders',
+      name: 'MY_MASTER_NODE_SHARED_FOLDERS.png',
+      label: 'Shared Folders',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <path d="M2 14 L2 42 L46 42 L46 14 L30 14 L26 10 L2 10 Z" fill="#FF9800"/>
+          <circle cx="18" cy="28" r="5" fill="white"/>
+          <circle cx="30" cy="28" r="5" fill="white"/>
+          <line x1="23" y1="28" x2="25" y2="28" stroke="white" strokeWidth="3.5"/>
+        </svg>
+      )
+    },
+    {
+      id: 'my-omen-unity-device-rel-ips',
+      name: 'MY_OMEN_UNITY_DEVICE_REL_IPS.png',
+      label: 'Device IPs',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <circle cx="24" cy="24" r="22" fill="#66BB6A"/>
+          <circle cx="24" cy="24" r="16" fill="none" stroke="white" strokeWidth="3.5"/>
+          <circle cx="24" cy="24" r="10" fill="none" stroke="white" strokeWidth="3.5"/>
+          <line x1="24" y1="2" x2="24" y2="46" stroke="white" strokeWidth="3.5"/>
+          <line x1="2" y1="24" x2="46" y2="24" stroke="white" strokeWidth="3.5"/>
+        </svg>
+      )
+    },
+    {
+      id: 'my-process-packages-predefined',
+      name: 'MY_PROCESS_PACKAGES_PREDEFINED.png',
+      label: 'Process Packages [Ctrl+p]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="4" y="6" width="40" height="36" rx="2" fill="#66BB6A" stroke="#43A047" strokeWidth="2"/>
+          <path d="M24 6 L24 42" stroke="#43A047" strokeWidth="3.5"/>
+          <path d="M4 24 L44 24" stroke="#43A047" strokeWidth="3.5"/>
+          <path d="M4 15 L44 15" stroke="#43A047" strokeWidth="2.5"/>
+          <path d="M4 33 L44 33" stroke="#43A047" strokeWidth="2.5"/>
+          <circle cx="14" cy="10.5" r="2.5" fill="white"/>
+          <circle cx="34" cy="10.5" r="2.5" fill="white"/>
+          <circle cx="14" cy="19.5" r="2.5" fill="white"/>
+          <circle cx="34" cy="19.5" r="2.5" fill="white"/>
+          <circle cx="14" cy="28.5" r="2.5" fill="white"/>
+          <circle cx="34" cy="28.5" r="2.5" fill="white"/>
+          <circle cx="14" cy="37.5" r="2.5" fill="white"/>
+          <circle cx="34" cy="37.5" r="2.5" fill="white"/>
+        </svg>
+      )
+    },
+    {
+      id: 'my-profile',
+      name: 'MY_PROFILE.png',
+      label: 'My Profile [F4]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <circle cx="24" cy="24" r="22" fill="#66B2FF"/>
+          <circle cx="24" cy="17" r="8" fill="white"/>
+          <path d="M8 42 C8 33 15 28 24 28 C33 28 40 33 40 42" fill="white"/>
+        </svg>
+      )
+    },
+    {
+      id: 'node-shared-folders',
+      name: 'NODE_SHARED_FOLDERS.png',
+      label: 'Shared Folders',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <path d="M2 14 L2 42 L46 42 L46 14 L30 14 L26 10 L2 10 Z" fill="#FF9800"/>
+          <rect x="12" y="20" width="3" height="14" fill="#F57C00"/>
+          <rect x="19" y="20" width="3" height="14" fill="#F57C00"/>
+          <rect x="26" y="20" width="3" height="14" fill="#F57C00"/>
+          <rect x="33" y="20" width="3" height="14" fill="#F57C00"/>
+        </svg>
+      )
+    },
+    {
+      id: 'omen',
+      name: 'omen.png',
+      label: 'Omen',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <circle cx="24" cy="24" r="22" fill="#AB47BC"/>
+          <text x="24" y="34" fontSize="30" fontWeight="bold" fill="white" textAnchor="middle" fontFamily="Arial">Ω</text>
+        </svg>
+      )
+    },
+    {
+      id: 'open-deploying-pc',
+      name: 'open_deploying_pc.png',
+      label: 'Deploy PC',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="4" y="8" width="40" height="26" rx="2" fill="#66B2FF"/>
+          <rect x="6" y="10" width="36" height="20" fill="#42A5F5"/>
+          <rect x="16" y="34" width="16" height="2" fill="#1976D2"/>
+          <rect x="10" y="36" width="28" height="2" rx="1" fill="#1976D2"/>
+          <circle cx="24" cy="20" r="8" fill="#66BB6A"/>
+          <path d="M24 16 L24 24 M20 20 L28 20" stroke="white" strokeWidth="3.5" strokeLinecap="round"/>
+          <path d="M18 12 L24 6 L30 12" stroke="#4DD0E1" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'open-deploying-pc-search',
+      name: 'open_deploying_pc_with_search_process.png',
+      label: 'Deploy Search',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="2" y="6" width="32" height="24" rx="2" fill="#66B2FF"/>
+          <rect x="8" y="30" width="20" height="2.5" fill="#42A5F5"/>
+          <circle cx="38" cy="36" r="9" fill="none" stroke="#66BB6A" strokeWidth="4"/>
+          <line x1="44" y1="42" x2="47" y2="45" stroke="#66BB6A" strokeWidth="4.5" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'open-mask-execution-logs',
+      name: 'OPEN_MASK_EXECUTION_LOGS.png',
+      label: 'Execution Logs [F6]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="6" y="2" width="36" height="44" rx="2" fill="none" stroke="#66B2FF" strokeWidth="3.5"/>
+          <rect x="10" y="8" width="28" height="6" fill="#66B2FF"/>
+          <line x1="10" y1="20" x2="38" y2="20" stroke="#4DD0E1" strokeWidth="2.5"/>
+          <line x1="10" y1="26" x2="34" y2="26" stroke="#4DD0E1" strokeWidth="2.5"/>
+          <line x1="10" y1="31" x2="36" y2="31" stroke="#4DD0E1" strokeWidth="2.5"/>
+          <line x1="10" y1="36" x2="32" y2="36" stroke="#4DD0E1" strokeWidth="2.5"/>
+        </svg>
+      )
+    },
+    {
+      id: 'open-remote-ftp-f11',
+      name: 'OPEN_REMOTE_FTP_F11.png',
+      label: 'Remote FTP [F11]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="4" y="4" width="40" height="40" rx="4" fill="#EF5350"/>
+          <text x="24" y="33" fontSize="22" fontWeight="bold" fill="white" textAnchor="middle" fontFamily="Arial">FTP</text>
+        </svg>
+      )
+    },
+    {
+      id: 'open-remote-rdp-f12',
+      name: 'OPEN_REMOTE_RDP_F12.png',
+      label: 'Remote RDP [F12]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="2" y="4" width="44" height="32" rx="2" fill="#66B2FF"/>
+          <rect x="4" y="6" width="40" height="26" fill="#42A5F5"/>
+          <rect x="16" y="36" width="16" height="2" fill="#1976D2"/>
+          <rect x="10" y="38" width="28" height="2" rx="1" fill="#1976D2"/>
+          <circle cx="12" cy="12" r="4" fill="white"/>
+          <path d="M8 24 C8 20 10 18 12 18 C14 18 16 20 16 24" fill="white"/>
+          <rect x="22" y="10" width="20" height="3" fill="white" rx="1"/>
+          <rect x="22" y="15" width="16" height="3" fill="white" rx="1"/>
+          <rect x="22" y="20" width="18" height="3" fill="white" rx="1"/>
+          <rect x="22" y="25" width="14" height="3" fill="white" rx="1"/>
+        </svg>
+      )
+    },
+    {
+      id: 'open-remote-ssh-f10',
+      name: 'OPEN_REMOTE_SSH_F10.png',
+      label: 'Remote SSH [F10]',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="2" y="6" width="44" height="36" rx="2" fill="#263238"/>
+          <path d="M10 16 L18 24 L10 32" stroke="#66BB6A" strokeWidth="4.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <line x1="22" y1="32" x2="38" y2="32" stroke="#66BB6A" strokeWidth="4.5" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'page-1',
+      name: 'PAGE_1.png',
+      label: 'Page 1',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <rect x="6" y="2" width="36" height="44" rx="2" fill="none" stroke="#66B2FF" strokeWidth="3.5"/>
+          <path d="M30 2 L30 16 L42 16" fill="none" stroke="#66B2FF" strokeWidth="3.5" strokeLinejoin="round"/>
+          <text x="24" y="34" fontSize="24" fontWeight="bold" fill="#66B2FF" textAnchor="middle" fontFamily="Arial">1</text>
+        </svg>
+      )
+    },
+    {
+      id: 'page-back',
+      name: 'PAGE_BACK.png',
+      label: 'Page Back',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <circle cx="24" cy="24" r="22" fill="#66B2FF"/>
+          <path d="M30 12 L14 24 L30 36" stroke="white" strokeWidth="4.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
     }
   ];
 
