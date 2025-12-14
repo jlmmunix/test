@@ -296,6 +296,368 @@ const BatchImprovedIcons = () => {
           <path d="M12 36 Q24 30 36 36" stroke="white" strokeWidth="2" fill="none"/>
         </svg>
       )
+    },
+    {
+      id: 'sparkle',
+      name: 'SPARKLE.png',
+      label: 'Sparkle',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 4 L26 20 L42 22 L26 24 L24 40 L22 24 L6 22 L22 20 Z" fill="white" stroke="#FCD34D" strokeWidth="2"/>
+          <circle cx="24" cy="22" r="14" fill="#FDE68A" opacity="0.3"/>
+          <path d="M12 10 L13 14 L17 15 L13 16 L12 20 L11 16 L7 15 L11 14 Z" fill="#FDE68A"/>
+          <path d="M36 8 L37 11 L40 12 L37 13 L36 16 L35 13 L32 12 L35 11 Z" fill="#FDE68A"/>
+        </svg>
+      )
+    },
+    {
+      id: 'sparkle-small',
+      name: 'SPARKLE_SMALL.png',
+      label: 'Small Sparkle',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 8 L26 20 L38 22 L26 24 L24 36 L22 24 L10 22 L22 20 Z" fill="#FCD34D"/>
+          <path d="M24 12 L25 20 L33 21 L25 22 L24 30 L23 22 L15 21 L23 20 Z" fill="#FDE68A"/>
+          <circle cx="24" cy="21" r="2" fill="white"/>
+        </svg>
+      )
+    },
+    {
+      id: 'chat-lock',
+      name: 'CHAT_LOCK.png',
+      label: 'Secure Chat',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 10 C6 7 8 5 11 5 L37 5 C40 5 42 7 42 10 L42 30 C42 33 40 35 37 35 L28 35 L20 43 L20 35 L11 35 C8 35 6 33 6 30 Z" fill="#10B981"/>
+          <circle cx="16" cy="18" r="3" fill="white"/>
+          <circle cx="24" cy="18" r="3" fill="white"/>
+          <circle cx="32" cy="18" r="3" fill="white"/>
+          <rect x="22" y="22" width="14" height="12" rx="2" fill="#1F2937"/>
+          <path d="M25 22 L25 19 C25 17.5 26 16 27.5 16 L30.5 16 C32 16 33 17.5 33 19 L33 22" stroke="#1F2937" strokeWidth="2" fill="none"/>
+          <circle cx="29" cy="28" r="1.5" fill="#FCD34D"/>
+        </svg>
+      )
+    },
+    {
+      id: 'receipt',
+      name: 'RECEIPT.png',
+      label: 'Receipt',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="4" width="28" height="40" rx="2" fill="white" stroke="#3B82F6" strokeWidth="2"/>
+          <rect x="12" y="8" width="12" height="3" rx="1" fill="#3B82F6"/>
+          <rect x="26" y="8" width="10" height="3" rx="1" fill="#10B981"/>
+          <rect x="12" y="14" width="12" height="3" rx="1" fill="#3B82F6"/>
+          <rect x="26" y="14" width="10" height="3" rx="1" fill="#10B981"/>
+          <rect x="12" y="20" width="12" height="3" rx="1" fill="#3B82F6"/>
+          <rect x="26" y="20" width="10" height="3" rx="1" fill="#10B981"/>
+          <rect x="12" y="26" width="12" height="3" rx="1" fill="#60A5FA"/>
+          <rect x="26" y="26" width="10" height="3" rx="1" fill="#34D399"/>
+          <line x1="12" y1="34" x2="36" y2="34" stroke="#1F2937" strokeWidth="2"/>
+          <rect x="12" y="37" width="12" height="3" rx="1" fill="#1F2937"/>
+          <rect x="26" y="37" width="10" height="3" rx="1" fill="#1F2937"/>
+        </svg>
+      )
+    },
+    {
+      id: 'document-bars',
+      name: 'DOCUMENT_BARS.png',
+      label: 'Document Bars',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="4" width="32" height="40" rx="2" fill="white" stroke="#6B7280" strokeWidth="2"/>
+          <rect x="10" y="8" width="16" height="4" rx="1" fill="#3B82F6"/>
+          <rect x="28" y="8" width="10" height="4" rx="1" fill="#10B981"/>
+          <rect x="10" y="15" width="20" height="4" rx="1" fill="#60A5FA"/>
+          <rect x="32" y="15" width="6" height="4" rx="1" fill="#34D399"/>
+          <rect x="10" y="22" width="14" height="4" rx="1" fill="#3B82F6"/>
+          <rect x="26" y="22" width="12" height="4" rx="1" fill="#10B981"/>
+          <rect x="10" y="29" width="18" height="4" rx="1" fill="#60A5FA"/>
+          <rect x="30" y="29" width="8" height="4" rx="1" fill="#34D399"/>
+          <rect x="10" y="36" width="28" height="4" rx="1" fill="#9CA3AF"/>
+        </svg>
+      )
+    },
+    {
+      id: 'devices-stacked',
+      name: 'DEVICES_STACKED.png',
+      label: 'Devices Stack',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="18" width="28" height="20" rx="2" fill="#059669" stroke="#047857" strokeWidth="2"/>
+          <rect x="10" y="20" width="24" height="14" fill="#10B981"/>
+          <rect x="19" y="34" width="6" height="2" fill="#047857"/>
+          <rect x="15" y="36" width="14" height="2" rx="1" fill="#047857"/>
+          <rect x="14" y="12" width="28" height="20" rx="2" fill="#3B82F6" stroke="#1E40AF" strokeWidth="2"/>
+          <rect x="16" y="14" width="24" height="14" fill="#60A5FA"/>
+          <rect x="25" y="28" width="6" height="2" fill="#1E40AF"/>
+          <rect x="21" y="30" width="14" height="2" rx="1" fill="#1E40AF"/>
+          <rect x="20" y="6" width="28" height="20" rx="2" fill="#8B5CF6" stroke="#7C3AED" strokeWidth="2"/>
+          <rect x="22" y="8" width="24" height="14" fill="#A78BFA"/>
+          <rect x="31" y="22" width="6" height="2" fill="#7C3AED"/>
+          <rect x="27" y="24" width="14" height="2" rx="1" fill="#7C3AED"/>
+        </svg>
+      )
+    },
+    {
+      id: 'monitor-check',
+      name: 'MONITOR_CHECK.png',
+      label: 'Monitor Check',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="8" width="40" height="28" rx="2" fill="#3B82F6" stroke="#1E40AF" strokeWidth="2"/>
+          <rect x="6" y="10" width="36" height="22" fill="#60A5FA"/>
+          <rect x="20" y="36" width="8" height="3" fill="#1E40AF"/>
+          <rect x="14" y="39" width="20" height="2" rx="1" fill="#1E40AF"/>
+          <circle cx="24" cy="21" r="8" fill="#10B981"/>
+          <path d="M20 21 L22 23 L28 17" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'monitor-badge',
+      name: 'MONITOR_BADGE.png',
+      label: 'Monitor Badge',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="10" width="32" height="22" rx="2" fill="#3B82F6" stroke="#1E40AF" strokeWidth="2"/>
+          <rect x="6" y="12" width="28" height="16" fill="#60A5FA"/>
+          <rect x="16" y="32" width="6" height="2" fill="#1E40AF"/>
+          <rect x="13" y="34" width="12" height="2" rx="1" fill="#1E40AF"/>
+          <circle cx="34" cy="32" r="10" fill="#10B981"/>
+          <circle cx="34" cy="32" r="7" fill="#34D399"/>
+          <path d="M30 32 L32.5 34.5 L38 29" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'monitor-approved',
+      name: 'MONITOR_APPROVED.png',
+      label: 'Approved Monitor',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="8" width="36" height="26" rx="2" fill="#3B82F6" stroke="#1E40AF" strokeWidth="2"/>
+          <rect x="8" y="10" width="32" height="20" fill="#60A5FA"/>
+          <rect x="20" y="34" width="8" height="3" fill="#1E40AF"/>
+          <rect x="15" y="37" width="18" height="3" rx="1" fill="#1E40AF"/>
+          <circle cx="36" cy="36" r="9" fill="#10B981"/>
+          <path d="M32 36 L34.5 38.5 L40 33" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'monitor-plus',
+      name: 'MONITOR_PLUS.png',
+      label: 'Add Monitor',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="8" width="32" height="24" rx="2" fill="#1F2937" stroke="#111827" strokeWidth="2"/>
+          <rect x="6" y="10" width="28" height="18" fill="#374151"/>
+          <rect x="16" y="32" width="6" height="3" fill="#111827"/>
+          <rect x="12" y="35" width="14" height="2" rx="1" fill="#111827"/>
+          <circle cx="36" cy="32" r="10" fill="#10B981"/>
+          <path d="M36 26 L36 38 M30 32 L42 32" stroke="white" strokeWidth="3" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'edit-document',
+      name: 'EDIT_DOCUMENT.png',
+      label: 'Edit Document',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="6" width="28" height="36" rx="2" fill="white" stroke="#3B82F6" strokeWidth="2"/>
+          <line x1="14" y1="14" x2="30" y2="14" stroke="#60A5FA" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="14" y1="20" x2="28" y2="20" stroke="#60A5FA" strokeWidth="2" strokeLinecap="round"/>
+          <line x1="14" y1="26" x2="26" y2="26" stroke="#60A5FA" strokeWidth="2" strokeLinecap="round"/>
+          <rect x="26" y="28" width="18" height="18" rx="2" fill="#F97316"/>
+          <rect x="28" y="30" width="14" height="14" rx="1" fill="#FB923C"/>
+          <path d="M31 40 L31 37 L34 37" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M34 37 L38 33 L40 35 L36 39 L34 39 L34 37" fill="white"/>
+        </svg>
+      )
+    },
+    {
+      id: 'hierarchy',
+      name: 'HIERARCHY.png',
+      label: 'Hierarchy',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="4" width="12" height="8" rx="1" fill="#3B82F6"/>
+          <rect x="4" y="20" width="12" height="8" rx="1" fill="#10B981"/>
+          <rect x="18" y="20" width="12" height="8" rx="1" fill="#10B981"/>
+          <rect x="32" y="20" width="12" height="8" rx="1" fill="#10B981"/>
+          <rect x="4" y="36" width="12" height="8" rx="1" fill="#8B5CF6"/>
+          <rect x="18" y="36" width="12" height="8" rx="1" fill="#8B5CF6"/>
+          <rect x="32" y="36" width="12" height="8" rx="1" fill="#8B5CF6"/>
+          <line x1="24" y1="12" x2="24" y2="20" stroke="#6B7280" strokeWidth="2"/>
+          <line x1="10" y1="20" x2="38" y2="20" stroke="#6B7280" strokeWidth="2"/>
+          <line x1="10" y1="28" x2="10" y2="36" stroke="#6B7280" strokeWidth="2"/>
+          <line x1="24" y1="28" x2="24" y2="36" stroke="#6B7280" strokeWidth="2"/>
+          <line x1="38" y1="28" x2="38" y2="36" stroke="#6B7280" strokeWidth="2"/>
+        </svg>
+      )
+    },
+    {
+      id: 'chevron-left',
+      name: 'CHEVRON_LEFT.png',
+      label: 'Chevron Left',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30 12 L18 24 L30 36" stroke="#6B7280" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'chevron-right',
+      name: 'CHEVRON_RIGHT.png',
+      label: 'Chevron Right',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 12 L30 24 L18 36" stroke="#6B7280" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'monitor-display',
+      name: 'MONITOR_DISPLAY.png',
+      label: 'Monitor Display',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="8" width="40" height="28" rx="2" fill="#3B82F6" stroke="#1E40AF" strokeWidth="2"/>
+          <rect x="6" y="10" width="36" height="22" fill="#DBEAFE"/>
+          <rect x="20" y="36" width="8" height="3" fill="#1E40AF"/>
+          <rect x="14" y="39" width="20" height="3" rx="1" fill="#1E40AF"/>
+          <circle cx="24" cy="21" r="2" fill="#3B82F6"/>
+        </svg>
+      )
+    },
+    {
+      id: 'calculator',
+      name: 'CALCULATOR.png',
+      label: 'Calculator',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="8" y="4" width="32" height="40" rx="3" fill="#3B82F6" stroke="#1E40AF" strokeWidth="2"/>
+          <rect x="12" y="8" width="24" height="8" rx="1" fill="#DBEAFE"/>
+          <rect x="12" y="20" width="6" height="5" rx="1" fill="#60A5FA"/>
+          <rect x="21" y="20" width="6" height="5" rx="1" fill="#60A5FA"/>
+          <rect x="30" y="20" width="6" height="5" rx="1" fill="#60A5FA"/>
+          <rect x="12" y="28" width="6" height="5" rx="1" fill="#60A5FA"/>
+          <rect x="21" y="28" width="6" height="5" rx="1" fill="#60A5FA"/>
+          <rect x="30" y="28" width="6" height="5" rx="1" fill="#60A5FA"/>
+          <rect x="12" y="36" width="6" height="5" rx="1" fill="#60A5FA"/>
+          <rect x="21" y="36" width="6" height="5" rx="1" fill="#60A5FA"/>
+          <rect x="30" y="36" width="6" height="5" rx="1" fill="#F97316"/>
+        </svg>
+      )
+    },
+    {
+      id: 'monitor-ruler',
+      name: 'MONITOR_RULER.png',
+      label: 'Monitor Ruler',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="8" width="36" height="24" rx="2" fill="#10B981" stroke="#059669" strokeWidth="2"/>
+          <rect x="8" y="10" width="32" height="18" fill="#34D399"/>
+          <rect x="20" y="32" width="8" height="3" fill="#059669"/>
+          <rect x="15" y="35" width="18" height="2" rx="1" fill="#059669"/>
+          <rect x="10" y="38" width="28" height="6" rx="1" fill="#FCD34D"/>
+          <line x1="12" y1="38" x2="12" y2="44" stroke="#92400E" strokeWidth="1.5"/>
+          <line x1="16" y1="38" x2="16" y2="44" stroke="#92400E" strokeWidth="1.5"/>
+          <line x1="20" y1="38" x2="20" y2="44" stroke="#92400E" strokeWidth="1.5"/>
+          <line x1="24" y1="38" x2="24" y2="44" stroke="#92400E" strokeWidth="1.5"/>
+          <line x1="28" y1="38" x2="28" y2="44" stroke="#92400E" strokeWidth="1.5"/>
+          <line x1="32" y1="38" x2="32" y2="44" stroke="#92400E" strokeWidth="1.5"/>
+          <line x1="36" y1="38" x2="36" y2="44" stroke="#92400E" strokeWidth="1.5"/>
+        </svg>
+      )
+    },
+    {
+      id: 'keyboard-coding',
+      name: 'KEYBOARD_CODING.png',
+      label: 'Keyboard Coding',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="4" y="26" width="40" height="18" rx="2" fill="#6B7280" stroke="#374151" strokeWidth="2"/>
+          <rect x="7" y="29" width="3" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="12" y="29" width="3" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="17" y="29" width="3" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="22" y="29" width="3" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="27" y="29" width="3" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="32" y="29" width="3" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="37" y="29" width="3" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="7" y="34" width="5" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="14" y="34" width="20" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="36" y="34" width="5" height="3" rx="0.5" fill="#9CA3AF"/>
+          <rect x="8" y="4" width="32" height="20" rx="2" fill="#1E40AF" stroke="#1E3A8A" strokeWidth="2"/>
+          <text x="14" y="17" fill="#60A5FA" fontFamily="monospace" fontSize="8" fontWeight="bold">&lt;/&gt;</text>
+        </svg>
+      )
+    },
+    {
+      id: 'wifi-signal',
+      name: 'WIFI_SIGNAL.png',
+      label: 'WiFi Signal',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="20" fill="#10B981"/>
+          <circle cx="24" cy="24" r="16" fill="#34D399"/>
+          <circle cx="24" cy="32" r="3" fill="white"/>
+          <path d="M16 24 Q24 18 32 24" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round"/>
+          <path d="M12 18 Q24 10 36 18" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round"/>
+          <path d="M8 12 Q24 2 40 12" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'phone-call',
+      name: 'PHONE_CALL.png',
+      label: 'Phone Call',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="12" y="6" width="24" height="36" rx="3" fill="#1F2937" stroke="#111827" strokeWidth="2"/>
+          <rect x="14" y="9" width="20" height="30" rx="1" fill="#374151"/>
+          <circle cx="24" cy="40" r="2" fill="#6B7280"/>
+          <circle cx="32" cy="16" r="12" fill="#10B981"/>
+          <path d="M28 13 L30 15 L35 10" stroke="white" strokeWidth="2.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M29 20 Q31 22 33 20" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'mobile-devices',
+      name: 'MOBILE_DEVICES.png',
+      label: 'Mobile Devices',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="8" width="16" height="32" rx="2" fill="#3B82F6" stroke="#1E40AF" strokeWidth="2"/>
+          <rect x="8" y="11" width="12" height="24" fill="#60A5FA"/>
+          <circle cx="14" cy="37" r="1.5" fill="#1E40AF"/>
+          <rect x="26" y="8" width="16" height="32" rx="2" fill="#8B5CF6" stroke="#7C3AED" strokeWidth="2"/>
+          <rect x="28" y="11" width="12" height="24" fill="#A78BFA"/>
+          <circle cx="34" cy="37" r="1.5" fill="#7C3AED"/>
+          <path d="M18 18 L20 20 L26 14" stroke="white" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      )
+    },
+    {
+      id: 'analytics-globe',
+      name: 'ANALYTICS_GLOBE.png',
+      label: 'Analytics Globe',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="20" cy="20" r="16" fill="#3B82F6"/>
+          <circle cx="20" cy="20" r="13" fill="#60A5FA"/>
+          <line x1="20" y1="4" x2="20" y2="36" stroke="white" strokeWidth="2"/>
+          <line x1="4" y1="20" x2="36" y2="20" stroke="white" strokeWidth="2"/>
+          <ellipse cx="20" cy="20" rx="6" ry="13" fill="none" stroke="white" strokeWidth="2"/>
+          <circle cx="36" cy="36" r="10" fill="#F97316"/>
+          <rect x="31" y="38" width="3" height="6" rx="0.5" fill="white"/>
+          <rect x="35" y="35" width="3" height="9" rx="0.5" fill="white"/>
+          <rect x="39" y="32" width="3" height="12" rx="0.5" fill="white"/>
+        </svg>
+      )
     }
   ];
 

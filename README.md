@@ -1,6 +1,6 @@
 # Icon Download Component
 
-A professional icon set with 17 custom-designed icons for web applications, featuring download functionality for both PNG and SVG formats.
+A professional icon set with 38 custom-designed icons for web applications, featuring download functionality for both PNG and SVG formats.
 
 ## 🚀 Quick Start
 
@@ -21,10 +21,14 @@ open icons-viewer.html
 
 ## 🎨 Icon Categories
 
-- **Actions**: Close Window, Copy, Delete, Deploy
-- **Devices**: Company Devices, Device Info, Device IPs
+- **Actions**: Close Window, Copy, Delete, Deploy, Edit
+- **Communication**: Chat Lock, Phone Call, WiFi Signal
+- **Devices**: Company Devices, Device Info, Device IPs, Monitors, Devices Stack, Mobile Devices
+- **Documents**: Receipt, Document Bars, Edit Document, Execution Logs
+- **Navigation**: Chevron Left, Chevron Right, Hierarchy
 - **Processes**: Company Processes, Deploy Process
-- **UI Elements**: Dashboard Home, Execution Logs
+- **Tools**: Calculator, Keyboard Coding, Monitor Ruler, Analytics Globe
+- **UI Elements**: Dashboard Home, Sparkle, Monitor Variants
 
 ## ✨ Features
 
@@ -44,4 +48,4 @@ See [ICONS_README.md](./ICONS_README.md) for complete documentation including:
 
 ---
 
-**Total Icons**: 17 | **Formats**: SVG, PNG | **Ready to Use**: ✅
+**Total Icons**: 38 | **Formats**: SVG, PNG | **Ready to Use**: ✅
