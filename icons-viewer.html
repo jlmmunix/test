@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batch Improved Icons - Viewer & Downloader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            margin-bottom: 2rem;
+        }
+        
+        .header h1 {
+            font-size: 2rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            color: #6b7280;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .icon-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.2s;
+        }
+        
+        .icon-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+        }
+        
+        .icon-wrapper {
+            background: #f9fafb;
+            padding: 0.75rem;
+            border-radius: 8px;
+        }
+        
+        .icon-label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #374151;
+            text-align: center;
+            line-height: 1.3;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 0.5rem;
+            width: 100%;
+        }
+        
+        button {
+            flex: 1;
+            padding: 0.5rem 0.75rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .btn-png {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .btn-png:hover {
+            background: #2563eb;
+        }
+        
+        .btn-svg {
+            background: #4b5563;
+            color: white;
+        }
+        
+        .btn-svg:hover {
+            background: #374151;
+        }
+        
+        .info-box {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .info-box h3 {
+            font-size: 1.25rem;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .info-section h4 {
+            font-size: 1rem;
+            color: #111827;
+            margin-bottom: 0.75rem;
+        }
+        
+        .info-section ul {
+            list-style: none;
+        }
+        
+        .info-section li {
+            font-size: 0.875rem;
+            color: #4b5563;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
+        }
+        
+        .info-section li::before {
+            content: "•";
+            font-weight: bold;
+            margin-right: 0.5rem;
+            flex-shrink: 0;
+        }
+        
+        .info-section.blue li::before {
+            color: #3b82f6;
+        }
+        
+        .info-section.green li::before {
+            color: #10b981;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 1rem;
+            }
+            
+            .icon-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Batch Improved Icons</h1>
+            <p>Professional icon set with modern design and multiple export options</p>
+        </div>
+        
+        <div class="grid" id="iconGrid"></div>
+        
+        <div class="info-box">
+            <h3>📦 Download Information</h3>
+            <div class="info-grid">
+                <div class="info-section blue">
+                    <h4>Icon Specifications:</h4>
+                    <ul>
+                        <li>All icons are 40×40px PNG files optimized for web</li>
+                        <li>SVG versions available for infinite scalability</li>
+                        <li>Filenames match original naming convention</li>
+                        <li><strong>17 icons</strong> ready to download</li>
+                    </ul>
+                </div>
+                <div class="info-section green">
+                    <h4>Design Features:</h4>
+                    <ul>
+                        <li>Modern flat design with depth and shadows</li>
+                        <li>Consistent color palette across all icons</li>
+                        <li>High contrast for better visibility</li>
+                        <li>Semantic colors (red for delete, green for success)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const icons = [
+            {
+                id: 'close-window',
+                name: 'CLOSE_WINDOW.png',
+                label: 'Close Window',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" rx="6" fill="#DC2626"/>
+                    <circle cx="24" cy="24" r="14" fill="#EF4444"/>
+                    <path d="M18 18 L30 30 M30 18 L18 30" stroke="white" stroke-width="3.5" stroke-linecap="round"/>
+                </svg>`
+            },
+            {
+                id: 'company-devices',
+                name: 'COMPANY_DEVICES.png',
+                label: 'Company Devices',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="10" width="36" height="24" rx="2" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+                    <rect x="8" y="12" width="32" height="18" fill="#60A5FA"/>
+                    <rect x="21" y="34" width="6" height="3" fill="#1E40AF"/>
+                    <rect x="16" y="37" width="16" height="2" rx="1" fill="#1E40AF"/>
+                    <circle cx="38" cy="38" r="7" fill="#10B981"/>
+                    <path d="M35 38 L37 40 L41 35" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`
+            },
+            {
+                id: 'company-processes',
+                name: 'COMPANY_PROCESSES.png',
+                label: 'Company Processes',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" fill="none" stroke="#8B5CF6" stroke-width="2.5"/>
+                    <circle cx="24" cy="8" r="5" fill="#8B5CF6"/>
+                    <circle cx="8" cy="32" r="5" fill="#8B5CF6"/>
+                    <circle cx="40" cy="32" r="5" fill="#8B5CF6"/>
+                    <circle cx="24" cy="38" r="5" fill="#A78BFA"/>
+                    <path d="M24 13 L24 18 M20 30 L12 32 M28 30 L36 32 M24 33 L24 38" stroke="#8B5CF6" stroke-width="2.5"/>
+                    <circle cx="24" cy="24" r="6" fill="#C4B5FD"/>
+                </svg>`
+            },
+            {
+                id: 'copy-entry',
+                name: 'COPY_ENTRY.png',
+                label: 'Copy Entry',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="8" width="24" height="30" rx="2" fill="#10B981" stroke="#059669" stroke-width="2"/>
+                    <rect x="16" y="16" width="24" height="30" rx="2" fill="#34D399" stroke="#10B981" stroke-width="2"/>
+                    <line x1="20" y1="22" x2="34" y2="22" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="20" y1="27" x2="34" y2="27" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="20" y1="32" x2="30" y2="32" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="20" y1="37" x2="32" y2="37" stroke="#047857" stroke-width="2" stroke-linecap="round"/>
+                </svg>`
+            },
+            {
+                id: 'copy-process',
+                name: 'COPY_PROCESS.png',
+                label: 'Copy Process',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="10" width="22" height="26" rx="2" fill="#10B981" stroke="#059669" stroke-width="2"/>
+                    <rect x="20" y="16" width="22" height="26" rx="2" fill="#34D399" stroke="#10B981" stroke-width="2"/>
+                    <circle cx="31" cy="29" r="8" fill="white" stroke="#059669" stroke-width="2"/>
+                    <path d="M27 29 L30 32 L36 26" stroke="#059669" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`
+            },
+            {
+                id: 'dashboard-home',
+                name: 'DASHBOARD_HOME.png',
+                label: 'Dashboard Home',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 6 L6 20 L10 20 L10 40 L20 40 L20 28 L28 28 L28 40 L38 40 L38 20 L42 20 Z" fill="#F97316" stroke="#EA580C" stroke-width="2" stroke-linejoin="round"/>
+                    <rect x="21" y="12" width="6" height="6" rx="1" fill="#FED7AA"/>
+                    <circle cx="14" cy="26" r="2" fill="#FED7AA"/>
+                    <circle cx="34" cy="26" r="2" fill="#FED7AA"/>
+                </svg>`
+            },
+            {
+                id: 'delete-entry',
+                name: 'DELETE_ENTRY.png',
+                label: 'Delete Entry',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="13" y="18" width="22" height="26" rx="2" fill="#EF4444" stroke="#DC2626" stroke-width="2"/>
+                    <rect x="10" y="13" width="28" height="5" rx="1.5" fill="#DC2626"/>
+                    <path d="M18 13 L18 9 C18 7.9 18.9 7 20 7 L28 7 C29.1 7 30 7.9 30 9 L30 13" fill="#B91C1C"/>
+                    <line x1="19" y1="24" x2="19" y2="37" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="24" y1="24" x2="24" y2="37" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="29" y1="24" x2="29" y2="37" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>`
+            },
+            {
+                id: 'delete-process',
+                name: 'DELETE_PROCESS.png',
+                label: 'Delete Process',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="13" y="18" width="22" height="26" rx="2" fill="#EF4444" stroke="#DC2626" stroke-width="2"/>
+                    <rect x="10" y="13" width="28" height="5" rx="1.5" fill="#DC2626"/>
+                    <path d="M18 13 L18 9 C18 7.9 18.9 7 20 7 L28 7 C29.1 7 30 7.9 30 9 L30 13" fill="#B91C1C"/>
+                    <circle cx="24" cy="31" r="8" fill="white"/>
+                    <circle cx="24" cy="28" r="1.5" fill="#DC2626"/>
+                    <path d="M24 30 L24 36" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>`
+            },
+            {
+                id: 'delete-user-cache',
+                name: 'DELETE_USER_CACHE.png',
+                label: 'Delete User Cache',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="18" r="12" fill="#60A5FA" stroke="#3B82F6" stroke-width="2"/>
+                    <circle cx="18" cy="15" r="5" fill="#DBEAFE"/>
+                    <path d="M9 24 C9 24 12 28 18 28 C24 28 27 24 27 24" stroke="#DBEAFE" stroke-width="2" fill="none"/>
+                    <rect x="26" y="26" width="18" height="16" rx="2" fill="#EF4444" stroke="#DC2626" stroke-width="2"/>
+                    <rect x="28" y="22" width="14" height="4" rx="1" fill="#DC2626"/>
+                    <line x1="31" y1="31" x2="31" y2="37" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="35" y1="31" x2="35" y2="37" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="39" y1="31" x2="39" y2="37" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>`
+            },
+            {
+                id: 'deploy-all-devices',
+                name: 'DEPLOY_ALL_ON_DEVICES.png',
+                label: 'Deploy All Devices',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="4" y="16" width="18" height="12" rx="1.5" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+                    <rect x="26" y="16" width="18" height="12" rx="1.5" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+                    <rect x="15" y="32" width="18" height="12" rx="1.5" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+                    <circle cx="24" cy="8" r="6" fill="#10B981"/>
+                    <path d="M24 4 L24 8 L24 12 M20 8 L24 8 L28 8" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                    <line x1="13" y1="22" x2="15" y2="22" stroke="#60A5FA" stroke-width="1.5"/>
+                    <line x1="35" y1="22" x2="37" y2="22" stroke="#60A5FA" stroke-width="1.5"/>
+                    <line x1="24" y1="38" x2="26" y2="38" stroke="#60A5FA" stroke-width="1.5"/>
+                </svg>`
+            },
+            {
+                id: 'deploy-my-processes',
+                name: 'DEPLOY_MY_PROCESSES.png',
+                label: 'Deploy My Processes',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="6" width="36" height="36" rx="3" fill="#1F2937"/>
+                    <rect x="8" y="8" width="32" height="32" rx="2" fill="#374151"/>
+                    <path d="M16 18 L24 24 L16 30" stroke="#10B981" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <line x1="26" y1="29" x2="34" y2="29" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="38" cy="10" r="8" fill="#10B981"/>
+                    <path d="M38 6 L38 10 L38 14 M34 10 L38 10 L42 10" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>`
+            },
+            {
+                id: 'deploy-process',
+                name: 'DEPLOY_PROCESS.png',
+                label: 'Deploy Process',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="18" fill="#10B981"/>
+                    <circle cx="24" cy="24" r="14" fill="#34D399"/>
+                    <path d="M17 24 L22 29 L32 19" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="24" cy="6" r="2" fill="#10B981"/>
+                    <circle cx="24" cy="42" r="2" fill="#10B981"/>
+                    <circle cx="6" cy="24" r="2" fill="#10B981"/>
+                    <circle cx="42" cy="24" r="2" fill="#10B981"/>
+                </svg>`
+            },
+            {
+                id: 'deploy-single-process',
+                name: 'DEPLOY_SINGLE_PROCESS.png',
+                label: 'Deploy Single',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="10" width="28" height="28" rx="3" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+                    <rect x="14" y="14" width="20" height="20" rx="2" fill="#60A5FA"/>
+                    <circle cx="36" cy="36" r="11" fill="#10B981"/>
+                    <circle cx="36" cy="36" r="8" fill="#34D399"/>
+                    <path d="M31 36 L34 39 L41 32" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`
+            },
+            {
+                id: 'deploy-single-process1',
+                name: 'DEPLOY_SINGLE_PROCESS1.png',
+                label: 'Deploy Single Alt',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="10" y="10" width="28" height="28" rx="3" fill="#10B981" stroke="#059669" stroke-width="2"/>
+                    <rect x="14" y="14" width="20" height="20" rx="2" fill="#34D399"/>
+                    <path d="M18 24 L23 29 L34 18" stroke="white" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>`
+            },
+            {
+                id: 'device-execution-logs',
+                name: 'DEVICE_EXECUTION_LOGS.png',
+                label: 'Execution Logs',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="6" width="32" height="36" rx="2" fill="white" stroke="#3B82F6" stroke-width="2"/>
+                    <rect x="10" y="8" width="28" height="6" fill="#3B82F6"/>
+                    <line x1="12" y1="18" x2="36" y2="18" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="12" y1="23" x2="32" y2="23" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="12" y1="28" x2="34" y2="28" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="12" y1="33" x2="30" y2="33" stroke="#60A5FA" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="38" cy="38" r="9" fill="#1F2937"/>
+                    <rect x="34" y="35" width="8" height="6" fill="#10B981"/>
+                </svg>`
+            },
+            {
+                id: 'device-info',
+                name: 'DEVICE_INFO.png',
+                label: 'Device Info',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="8" y="4" width="32" height="40" rx="4" fill="#3B82F6" stroke="#1E40AF" stroke-width="2"/>
+                    <rect x="10" y="8" width="28" height="32" rx="2" fill="#60A5FA"/>
+                    <circle cx="24" cy="24" r="8" fill="white"/>
+                    <circle cx="24" cy="19" r="2" fill="#3B82F6"/>
+                    <rect x="22" y="23" width="4" height="8" rx="1" fill="#3B82F6"/>
+                    <circle cx="24" cy="38" r="2.5" fill="#1E40AF"/>
+                </svg>`
+            },
+            {
+                id: 'device-ips',
+                name: 'DEVICE_IPS.png',
+                label: 'Device IPs',
+                svg: `<svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="20" fill="#10B981"/>
+                    <circle cx="24" cy="24" r="16" fill="#34D399"/>
+                    <circle cx="24" cy="24" r="14" fill="none" stroke="white" stroke-width="2"/>
+                    <circle cx="24" cy="24" r="8" fill="none" stroke="white" stroke-width="2"/>
+                    <circle cx="24" cy="24" r="2" fill="white"/>
+                    <line x1="24" y1="4" x2="24" y2="44" stroke="white" stroke-width="2"/>
+                    <line x1="4" y1="24" x2="44" y2="24" stroke="white" stroke-width="2"/>
+                    <path d="M12 12 Q24 18 36 12" stroke="white" stroke-width="2" fill="none"/>
+                    <path d="M12 36 Q24 30 36 36" stroke="white" stroke-width="2" fill="none"/>
+                </svg>`
+            }
+        ];
+
+        function downloadSVG(svgString, filename) {
+            const blob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            setTimeout(() => URL.revokeObjectURL(url), 100);
+        }
+
+        function downloadPNG(svgString, filename) {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const img = new Image();
+            
+            canvas.width = 40;
+            canvas.height = 40;
+            
+            img.onload = () => {
+                ctx.drawImage(img, 0, 0);
+                canvas.toBlob((blob) => {
+                    const url = URL.createObjectURL(blob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    setTimeout(() => URL.revokeObjectURL(url), 100);
+                }, 'image/png');
+            };
+            
+            const svgBase64 = btoa(unescape(encodeURIComponent(svgString)));
+            img.src = 'data:image/svg+xml;base64,' + svgBase64;
+        }
+
+        const grid = document.getElementById('iconGrid');
+        icons.forEach(icon => {
+            const card = document.createElement('div');
+            card.className = 'icon-card';
+            
+            card.innerHTML = `
+                <div class="icon-wrapper">
+                    ${icon.svg}
+                </div>
+                <div class="icon-label">${icon.label}</div>
+                <div class="button-group">
+                    <button class="btn-png" onclick="downloadPNG(\`${icon.svg.replace(/`/g, '\\`')}\`, '${icon.name}')">PNG</button>
+                    <button class="btn-svg" onclick="downloadSVG(\`${icon.svg.replace(/`/g, '\\`')}\`, '${icon.name.replace('.png', '.svg')}')">SVG</button>
+                </div>
+            `;
+            
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
