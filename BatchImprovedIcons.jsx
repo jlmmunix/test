@@ -447,6 +447,8 @@ const BatchImprovedIcons = () => {
           <circle cx="11.5" cy="19.5" r="0.8" fill="#FFEB3B"/>
           <circle cx="13.5" cy="19.5" r="0.8" fill="#66BB6A"/>
           <text x="20" y="29" fontSize="11" fontWeight="bold" fill="#AB47BC" textAnchor="middle" fontFamily="monospace">&lt;/&gt;</text>
+          <rect x="27" y="3" width="10" height="6" rx="1" fill="#AB47BC"/>
+          <text x="32" y="7.5" fontSize="5" fontWeight="bold" fill="white" textAnchor="middle" fontFamily="Arial">AI</text>
         </svg>
       )
     },
@@ -489,15 +491,13 @@ const BatchImprovedIcons = () => {
       svg: (
         <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" fill="transparent"/>
-          <rect x="2" y="4" width="36" height="26" rx="2" fill="#66B2FF"/>
-          <rect x="4" y="6" width="32" height="21" fill="#42A5F5"/>
-          <rect x="14" y="30" width="12" height="2" fill="#1976D2"/>
-          <rect x="9" y="32" width="22" height="2" rx="1" fill="#1976D2"/>
-          <circle cx="11" cy="11" r="3.5" fill="white"/>
-          <path d="M7 20 C7 17 9 15 11 15 C13 15 15 17 15 20" fill="white"/>
-          <rect x="19" y="10" width="16" height="2.5" fill="white" rx="1"/>
-          <rect x="19" y="14" width="13" height="2.5" fill="white" rx="1"/>
-          <rect x="19" y="18" width="15" height="2.5" fill="white" rx="1"/>
+          <rect x="3" y="5" width="34" height="24" rx="2" fill="#66B2FF"/>
+          <rect x="5" y="7" width="30" height="19" fill="#E3F2FD"/>
+          <text x="20" y="21" fontSize="12" fontWeight="bold" fill="#1976D2" textAnchor="middle" fontFamily="Arial">RDP</text>
+          <circle cx="32" cy="10" r="3" fill="#4CAF50"/>
+          <circle cx="32" cy="10" r="1.5" fill="white"/>
+          <rect x="16" y="29" width="8" height="2" fill="#1976D2"/>
+          <rect x="12" y="31" width="16" height="2" rx="1" fill="#1976D2"/>
         </svg>
       )
     },
@@ -681,6 +681,38 @@ const BatchImprovedIcons = () => {
           <circle cx="18" cy="18" r="8" fill="#E3F2FD"/>
           <line x1="27" y1="27" x2="36" y2="36" stroke="#42A5F5" strokeWidth="4" strokeLinecap="round"/>
           <circle cx="36" cy="36" r="2" fill="#1976D2"/>
+        </svg>
+      )
+    },
+    {
+      id: 'save-and-deploy-process',
+      name: 'SAVE_AND_DEPLOY_PROCESS.png',
+      label: 'Save & Deploy Process',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <rect x="2" y="8" width="16" height="18" rx="1.5" fill="#66B2FF"/>
+          <rect x="2" y="8" width="16" height="4" fill="#42A5F5"/>
+          <rect x="6" y="12" width="8" height="10" fill="white"/>
+          <rect x="8" y="8" width="4" height="3" fill="white"/>
+          <path d="M19 17 L24 17" stroke="#4DD0E1" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M22 14.5 L24.5 17 L22 19.5" stroke="#4DD0E1" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          <circle cx="31" cy="17" r="7" fill="#66BB6A"/>
+          <path d="M31 13 L31 21 M28 16 L31 13 L34 16" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        </svg>
+      )
+    },
+    {
+      id: 'deploy-process-action',
+      name: 'DEPLOY_PROCESS_ACTION.png',
+      label: 'Deploy Process',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <circle cx="20" cy="20" r="16" fill="#66BB6A"/>
+          <path d="M20 12 L20 28 M16 16 L20 12 L24 16" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          <circle cx="32" cy="8" r="6" fill="#42A5F5"/>
+          <path d="M30 6 L30 10 L34 8 Z" fill="white"/>
         </svg>
       )
     },

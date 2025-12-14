@@ -341,16 +341,13 @@ const FinalBatchIcons = () => {
       svg: (
         <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" fill="transparent"/>
-          <rect x="2" y="4" width="44" height="32" rx="2" fill="#66B2FF"/>
-          <rect x="4" y="6" width="40" height="26" fill="#42A5F5"/>
-          <rect x="16" y="36" width="16" height="2" fill="#1976D2"/>
-          <rect x="10" y="38" width="28" height="2" rx="1" fill="#1976D2"/>
-          <circle cx="12" cy="12" r="4" fill="white"/>
-          <path d="M8 24 C8 20 10 18 12 18 C14 18 16 20 16 24" fill="white"/>
-          <rect x="22" y="10" width="20" height="3" fill="white" rx="1"/>
-          <rect x="22" y="15" width="16" height="3" fill="white" rx="1"/>
-          <rect x="22" y="20" width="18" height="3" fill="white" rx="1"/>
-          <rect x="22" y="25" width="14" height="3" fill="white" rx="1"/>
+          <rect x="3" y="5" width="42" height="28" rx="2" fill="#66B2FF"/>
+          <rect x="5" y="7" width="38" height="24" fill="#E3F2FD"/>
+          <text x="24" y="24" fontSize="14" fontWeight="bold" fill="#1976D2" textAnchor="middle" fontFamily="Arial">RDP</text>
+          <circle cx="40" cy="10" r="3.5" fill="#4CAF50"/>
+          <circle cx="40" cy="10" r="1.8" fill="white"/>
+          <rect x="18" y="35" width="12" height="2" fill="#1976D2"/>
+          <rect x="14" y="37" width="20" height="2" rx="1" fill="#1976D2"/>
         </svg>
       )
     },

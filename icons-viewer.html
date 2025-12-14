@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Icons - Viewer & Downloader (62 icons) - UPDATED</title>
+    <title>Complete Icon Set (64 icons) - Latest Update</title>
     <style>
         * {
             margin: 0;
@@ -40,15 +40,30 @@
         .header p {
             color: #6b7280;
             font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
         
-        .update-notice {
+        .update-badges {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+        
+        .badge-new {
             background: #10b981;
             color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            font-weight: 600;
+        }
+        
+        .badge-improved {
+            background: #3b82f6;
+            color: white;
         }
         
         .grid {
@@ -193,39 +208,53 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>Complete Icon Set (62 Icons) ✨</h1>
+            <h1>Complete Icon Set (64 Icons)</h1>
             <p>Professional icon collection with modern design and multiple export options</p>
-            <div class="update-notice">
-                ✓ Updated with 7 redesigned icons for better clarity!
+            <div class="update-badges">
+                <span class="badge badge-new">✨ 2 NEW Icons Added</span>
+                <span class="badge badge-improved">🔄 2 Icons Improved</span>
             </div>
         </div>
         
         <div class="grid" id="iconGrid"></div>
         
         <div class="info-box">
-            <h3>📦 Download Information</h3>
+            <h3>📦 Latest Updates</h3>
             <div class="info-grid">
+                <div class="info-section green">
+                    <h4>🆕 New Icons (2):</h4>
+                    <ul>
+                        <li><strong>Save & Deploy Process</strong> - Combined action: save then deploy</li>
+                        <li><strong>Deploy Process Action</strong> - Upload arrow with play button</li>
+                    </ul>
+                </div>
+                <div class="info-section blue">
+                    <h4>🔄 Improved Icons (2):</h4>
+                    <ul>
+                        <li><strong>RDP Remote</strong> - Now shows "RDP" text clearly with connection indicator</li>
+                        <li><strong>AI Code Generation</strong> - Added purple "AI" badge for instant recognition</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="info-grid" style="margin-top: 2rem;">
                 <div class="info-section blue">
                     <h4>Icon Specifications:</h4>
                     <ul>
                         <li>All icons are 40×40px PNG files optimized for web</li>
                         <li>SVG versions available for infinite scalability</li>
                         <li>Filenames match exact naming convention</li>
-                        <li><strong>62 icons</strong> ready to download</li>
+                        <li><strong>64 icons</strong> ready to download</li>
                         <li>Includes keyboard shortcuts in labels</li>
-                        <li>7 icons redesigned for clarity</li>
                     </ul>
                 </div>
                 <div class="info-section green">
-                    <h4>Recent Improvements:</h4>
+                    <h4>Design Features:</h4>
                     <ul>
-                        <li><strong>Start/Play</strong> - Clear green play button</li>
-                        <li><strong>Multiple Devices</strong> - Shows all device types</li>
-                        <li><strong>Refresh/Reload</strong> - Circular with arrows</li>
-                        <li><strong>Sync/Update</strong> - Green with checkmark</li>
-                        <li><strong>Server/Network</strong> - Clear blue server stack</li>
-                        <li><strong>Empty/No Data</strong> - Dashed folder with text</li>
-                        <li><strong>Upload/Deploy</strong> - Cloud with upload arrow</li>
+                        <li>Modern flat design with depth and shadows</li>
+                        <li>Extra thick strokes (3.5-4.5px) for clarity</li>
+                        <li>Transparent backgrounds for all states</li>
+                        <li>Clear, unambiguous visual meanings</li>
+                        <li>Production-ready for immediate use</li>
                     </ul>
                 </div>
             </div>
@@ -574,6 +603,8 @@
           <circle cx="11.5" cy="19.5" r="0.8" fill="#FFEB3B"/>
           <circle cx="13.5" cy="19.5" r="0.8" fill="#66BB6A"/>
           <text x="20" y="29" font-size="11" font-weight="bold" fill="#AB47BC" text-anchor="middle" font-family="monospace">&lt;/&gt;</text>
+          <rect x="27" y="3" width="10" height="6" rx="1" fill="#AB47BC"/>
+          <text x="32" y="7.5" font-size="5" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">AI</text>
         </svg>`
             },
             {
@@ -610,15 +641,13 @@
                 label: 'Open Remote RDP',
                 svg: `<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
           <rect width="40" height="40" fill="transparent"/>
-          <rect x="2" y="4" width="36" height="26" rx="2" fill="#66B2FF"/>
-          <rect x="4" y="6" width="32" height="21" fill="#42A5F5"/>
-          <rect x="14" y="30" width="12" height="2" fill="#1976D2"/>
-          <rect x="9" y="32" width="22" height="2" rx="1" fill="#1976D2"/>
-          <circle cx="11" cy="11" r="3.5" fill="white"/>
-          <path d="M7 20 C7 17 9 15 11 15 C13 15 15 17 15 20" fill="white"/>
-          <rect x="19" y="10" width="16" height="2.5" fill="white" rx="1"/>
-          <rect x="19" y="14" width="13" height="2.5" fill="white" rx="1"/>
-          <rect x="19" y="18" width="15" height="2.5" fill="white" rx="1"/>
+          <rect x="3" y="5" width="34" height="24" rx="2" fill="#66B2FF"/>
+          <rect x="5" y="7" width="30" height="19" fill="#E3F2FD"/>
+          <text x="20" y="21" font-size="12" font-weight="bold" fill="#1976D2" text-anchor="middle" font-family="Arial">RDP</text>
+          <circle cx="32" cy="10" r="3" fill="#4CAF50"/>
+          <circle cx="32" cy="10" r="1.5" fill="white"/>
+          <rect x="16" y="29" width="8" height="2" fill="#1976D2"/>
+          <rect x="12" y="31" width="16" height="2" rx="1" fill="#1976D2"/>
         </svg>`
             },
             {
@@ -776,6 +805,34 @@
           <circle cx="18" cy="18" r="8" fill="#E3F2FD"/>
           <line x1="27" y1="27" x2="36" y2="36" stroke="#42A5F5" stroke-width="4" stroke-linecap="round"/>
           <circle cx="36" cy="36" r="2" fill="#1976D2"/>
+        </svg>`
+            },
+            {
+                id: 'save-and-deploy-process',
+                name: 'SAVE_AND_DEPLOY_PROCESS.png',
+                label: 'Save & Deploy Process',
+                svg: `<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <rect x="2" y="8" width="16" height="18" rx="1.5" fill="#66B2FF"/>
+          <rect x="2" y="8" width="16" height="4" fill="#42A5F5"/>
+          <rect x="6" y="12" width="8" height="10" fill="white"/>
+          <rect x="8" y="8" width="4" height="3" fill="white"/>
+          <path d="M19 17 L24 17" stroke="#4DD0E1" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M22 14.5 L24.5 17 L22 19.5" stroke="#4DD0E1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="31" cy="17" r="7" fill="#66BB6A"/>
+          <path d="M31 13 L31 21 M28 16 L31 13 L34 16" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </svg>`
+            },
+            {
+                id: 'deploy-process-action',
+                name: 'DEPLOY_PROCESS_ACTION.png',
+                label: 'Deploy Process',
+                svg: `<svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <circle cx="20" cy="20" r="16" fill="#66BB6A"/>
+          <path d="M20 12 L20 28 M16 16 L20 12 L24 16" stroke="white" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="32" cy="8" r="6" fill="#42A5F5"/>
+          <path d="M30 6 L30 10 L34 8 Z" fill="white"/>
         </svg>`
             },
             {

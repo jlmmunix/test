@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ImprovedIcons = () => {
+const LatestImprovedIcons = () => {
   const [downloading, setDownloading] = useState(false);
 
   const downloadPNG = (svgElement, filename) => {
@@ -56,7 +56,6 @@ const ImprovedIcons = () => {
   };
 
   const icons = [
-    // First batch - already created
     {
       id: 'duplicate-process',
       name: 'DUPLICATE_PROCESS.png',
@@ -116,20 +115,6 @@ const ImprovedIcons = () => {
           <line x1="11" y1="20" x2="24" y2="20" stroke="#E0E0E0" strokeWidth="2"/>
           <path d="M24 24 L30 18 L28 16 L22 22 Z" fill="#FFA726"/>
           <rect x="22" y="22" width="3" height="3" fill="#FFD54F"/>
-        </svg>
-      )
-    },
-    {
-      id: 'empty',
-      name: 'EMPTY.png',
-      label: 'Empty / No Data',
-      svg: (
-        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-          <rect width="48" height="48" fill="transparent"/>
-          <path d="M4 14 L4 40 L44 40 L44 14 L28 14 L24 10 L4 10 Z" fill="none" stroke="#BDBDBD" strokeWidth="3" strokeDasharray="4 4"/>
-          <circle cx="24" cy="27" r="12" fill="none" stroke="#9E9E9E" strokeWidth="3"/>
-          <line x1="16" y1="19" x2="32" y2="35" stroke="#9E9E9E" strokeWidth="3" strokeLinecap="round"/>
-          <text x="24" y="32" fontSize="10" fontWeight="bold" fill="#757575" textAnchor="middle" fontFamily="Arial">EMPTY</text>
         </svg>
       )
     },
@@ -246,6 +231,38 @@ const ImprovedIcons = () => {
           <line x1="18" y1="26" x2="31" y2="26" stroke="#66BB6A" strokeWidth="3.5" strokeLinecap="round"/>
         </svg>
       )
+    },
+    {
+      id: 'save-and-deploy-process',
+      name: 'SAVE_AND_DEPLOY_PROCESS.png',
+      label: 'Save & Deploy Process',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <rect x="2" y="8" width="16" height="18" rx="1.5" fill="#66B2FF"/>
+          <rect x="2" y="8" width="16" height="4" fill="#42A5F5"/>
+          <rect x="6" y="12" width="8" height="10" fill="white"/>
+          <rect x="8" y="8" width="4" height="3" fill="white"/>
+          <path d="M19 17 L24 17" stroke="#4DD0E1" strokeWidth="2.5" strokeLinecap="round"/>
+          <path d="M22 14.5 L24.5 17 L22 19.5" stroke="#4DD0E1" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          <circle cx="31" cy="17" r="7" fill="#66BB6A"/>
+          <path d="M31 13 L31 21 M28 16 L31 13 L34 16" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+        </svg>
+      )
+    },
+    {
+      id: 'deploy-process-action',
+      name: 'DEPLOY_PROCESS_ACTION.png',
+      label: 'Deploy Process',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" fill="transparent"/>
+          <circle cx="20" cy="20" r="16" fill="#66BB6A"/>
+          <path d="M20 12 L20 28 M16 16 L20 12 L24 16" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+          <circle cx="32" cy="8" r="6" fill="#42A5F5"/>
+          <path d="M30 6 L30 10 L34 8 Z" fill="white"/>
+        </svg>
+      )
     }
   ];
 
@@ -255,39 +272,9 @@ const ImprovedIcons = () => {
         <div className="bg-gray-800 rounded-2xl shadow-xl p-8 border border-gray-700">
           <div className="mb-8">
             <h1 className="text-4xl font-bold text-white mb-2">
-              Icon Set - Exact Specifications
+              Latest Icon Improvements
             </h1>
-            <p className="text-gray-300">Transparent backgrounds, huge icons, thick strokes (3-3.5px), vibrant colors</p>
-          </div>
-
-          <div className="mb-6 p-4 rounded-lg bg-gray-700 border border-gray-600">
-            <h3 className="font-semibold mb-3 text-white">Button States (from your config):</h3>
-            <div className="grid grid-cols-4 gap-4 text-xs text-gray-300">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-2 rounded flex items-center justify-center" style={{backgroundColor: '#363f49', border: '1px solid #444444'}}>
-                  <span style={{color: 'yellow', fontSize: '10px'}}>Normal</span>
-                </div>
-                <span>#363f49 + yellow</span>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-2 rounded flex items-center justify-center" style={{backgroundColor: '#4CAF50', border: '1px solid #444444'}}>
-                  <span className="text-white" style={{fontSize: '10px'}}>Hover</span>
-                </div>
-                <span>#4CAF50 (green)</span>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-2 rounded flex items-center justify-center" style={{backgroundColor: '#e6ffff', border: '1px solid #444444'}}>
-                  <span style={{color: 'red', fontSize: '10px'}}>Selected</span>
-                </div>
-                <span>#e6ffff + red</span>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-2 rounded flex items-center justify-center" style={{backgroundColor: '#4CAF50', border: '1px solid #4CAF50'}}>
-                  <span className="text-white" style={{fontSize: '10px'}}>Active</span>
-                </div>
-                <span>#4CAF50 + white</span>
-              </div>
-            </div>
+            <p className="text-gray-300">Clearer designs for RDP, AI Code Generation, and new Save+Deploy icons</p>
           </div>
 
           <div className="flex gap-3 mb-6 flex-wrap">
@@ -343,14 +330,12 @@ const ImprovedIcons = () => {
           </div>
 
           <div className="mt-8 p-6 rounded-xl shadow-lg bg-gray-700 border border-gray-600">
-            <h3 className="text-lg font-semibold mb-3" style={{color: '#66BB6A'}}>✓ Specifications Matched:</h3>
+            <h3 className="text-lg font-semibold mb-3" style={{color: '#66BB6A'}}>✓ Latest Improvements:</h3>
             <ul className="space-y-2 text-gray-200 text-sm">
-              <li>• <strong className="text-white">HUGE icons</strong> - Nearly fill entire 40x40 canvas</li>
-              <li>• <strong className="text-white">Extra thick strokes (3-3.5px)</strong> - Crystal clear visibility</li>
-              <li>• <strong className="text-white">Transparent backgrounds</strong> - Work on all button states</li>
-              <li>• <strong className="text-white">Vibrant colors</strong> - Blue (#66B2FF), Orange (#FF9800), Purple (#AB47BC), Green (#66BB6A)</li>
-              <li>• <strong className="text-white">Yellow labels</strong> - Matching your button config</li>
-              <li>• <strong className="text-white">Exact dimensions</strong> - 40x40px PNG exports</li>
+              <li>• <strong className="text-white">RDP Icon</strong> - Now shows "RDP" text clearly with connection indicator</li>
+              <li>• <strong className="text-white">AI Code Generation</strong> - Added purple "AI" badge for clarity</li>
+              <li>• <strong className="text-white">Save & Deploy</strong> - NEW combined action icon (save → deploy)</li>
+              <li>• <strong className="text-white">Deploy Process</strong> - Clear upload arrow with play button</li>
             </ul>
           </div>
         </div>
@@ -359,4 +344,4 @@ const ImprovedIcons = () => {
   );
 };
 
-export default ImprovedIcons;
+export default LatestImprovedIcons;
