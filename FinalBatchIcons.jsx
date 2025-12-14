@@ -164,27 +164,24 @@ const FinalBatchIcons = () => {
       svg: (
         <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" fill="transparent"/>
-          <g>
-            <rect x="2" y="2" width="44" height="13" rx="2" fill="#FF9800"/>
-            <circle cx="8" cy="8.5" r="3" fill="#66BB6A"/>
-            <circle cx="15" cy="8.5" r="3" fill="#EF5350"/>
-            <circle cx="22" cy="8.5" r="3" fill="#FFEB3B"/>
-            <text x="30" y="12" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial">SERVER</text>
-          </g>
-          <g>
-            <rect x="2" y="17" width="44" height="13" rx="2" fill="#FF9800"/>
-            <circle cx="8" cy="23.5" r="3" fill="#66BB6A"/>
-            <circle cx="15" cy="23.5" r="3" fill="#66BB6A"/>
-            <circle cx="22" cy="23.5" r="3" fill="#66BB6A"/>
-            <text x="30" y="27" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial">SERVER</text>
-          </g>
-          <g>
-            <rect x="2" y="32" width="44" height="13" rx="2" fill="#FF9800"/>
-            <circle cx="8" cy="38.5" r="3" fill="#66BB6A"/>
-            <circle cx="15" cy="38.5" r="3" fill="#66BB6A"/>
-            <circle cx="22" cy="38.5" r="3" fill="#66BB6A"/>
-            <text x="30" y="42" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial">SERVER</text>
-          </g>
+          <rect x="6" y="4" width="36" height="12" rx="2" fill="#42A5F5" stroke="#1976D2" strokeWidth="2"/>
+          <circle cx="11" cy="10" r="2" fill="#66BB6A"/>
+          <circle cx="17" cy="10" r="2" fill="#66BB6A"/>
+          <circle cx="23" cy="10" r="2" fill="#FFEB3B"/>
+          <line x1="30" y1="8" x2="38" y2="8" stroke="white" strokeWidth="2"/>
+          <line x1="30" y1="12" x2="38" y2="12" stroke="white" strokeWidth="2"/>
+          <rect x="6" y="18" width="36" height="12" rx="2" fill="#42A5F5" stroke="#1976D2" strokeWidth="2"/>
+          <circle cx="11" cy="24" r="2" fill="#66BB6A"/>
+          <circle cx="17" cy="24" r="2" fill="#66BB6A"/>
+          <circle cx="23" cy="24" r="2" fill="#66BB6A"/>
+          <line x1="30" y1="22" x2="38" y2="22" stroke="white" strokeWidth="2"/>
+          <line x1="30" y1="26" x2="38" y2="26" stroke="white" strokeWidth="2"/>
+          <rect x="6" y="32" width="36" height="12" rx="2" fill="#42A5F5" stroke="#1976D2" strokeWidth="2"/>
+          <circle cx="11" cy="38" r="2" fill="#66BB6A"/>
+          <circle cx="17" cy="38" r="2" fill="#66BB6A"/>
+          <circle cx="23" cy="38" r="2" fill="#66BB6A"/>
+          <line x1="30" y1="36" x2="38" y2="36" stroke="white" strokeWidth="2"/>
+          <line x1="30" y1="40" x2="38" y2="40" stroke="white" strokeWidth="2"/>
         </svg>
       )
     },
@@ -283,17 +280,15 @@ const FinalBatchIcons = () => {
     {
       id: 'open-deploying-pc',
       name: 'open_deploying_pc.png',
-      label: 'Deploy PC',
+      label: 'Upload / Deploy',
       svg: (
         <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" fill="transparent"/>
-          <rect x="4" y="8" width="40" height="26" rx="2" fill="#66B2FF"/>
-          <rect x="6" y="10" width="36" height="20" fill="#42A5F5"/>
-          <rect x="16" y="34" width="16" height="2" fill="#1976D2"/>
-          <rect x="10" y="36" width="28" height="2" rx="1" fill="#1976D2"/>
-          <circle cx="24" cy="20" r="8" fill="#66BB6A"/>
-          <path d="M24 16 L24 24 M20 20 L28 20" stroke="white" strokeWidth="3.5" strokeLinecap="round"/>
-          <path d="M18 12 L24 6 L30 12" stroke="#4DD0E1" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 28 C8 28 6 25 6 22 C6 19 8 16 12 16 C12 11 16 8 20 8 C24 8 28 11 28 16 C32 16 34 19 34 22 C34 25 32 28 28 28" fill="#66B2FF" stroke="#1976D2" strokeWidth="2"/>
+          <rect x="19" y="24" width="10" height="20" rx="1" fill="#1976D2"/>
+          <path d="M14 28 L24 18 L34 28" fill="#66BB6A" stroke="#43A047" strokeWidth="2" strokeLinejoin="round"/>
+          <circle cx="24" cy="18" r="3" fill="#66BB6A"/>
+          <rect x="8" y="40" width="32" height="4" rx="2" fill="#1976D2"/>
         </svg>
       )
     },

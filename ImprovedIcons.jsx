@@ -122,15 +122,14 @@ const ImprovedIcons = () => {
     {
       id: 'empty',
       name: 'EMPTY.png',
-      label: 'Empty',
+      label: 'Empty / No Data',
       svg: (
-        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" fill="transparent"/>
-          <rect x="10" y="7" width="20" height="26" rx="2" fill="white"/>
-          <line x1="13" y1="12" x2="27" y2="12" stroke="#BDBDBD" strokeWidth="2"/>
-          <line x1="13" y1="17" x2="27" y2="17" stroke="#BDBDBD" strokeWidth="2"/>
-          <line x1="13" y1="22" x2="27" y2="22" stroke="#BDBDBD" strokeWidth="2"/>
-          <line x1="13" y1="27" x2="24" y2="27" stroke="#BDBDBD" strokeWidth="2"/>
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <path d="M4 14 L4 40 L44 40 L44 14 L28 14 L24 10 L4 10 Z" fill="none" stroke="#BDBDBD" strokeWidth="3" strokeDasharray="4 4"/>
+          <circle cx="24" cy="27" r="12" fill="none" stroke="#9E9E9E" strokeWidth="3"/>
+          <line x1="16" y1="19" x2="32" y2="35" stroke="#9E9E9E" strokeWidth="3" strokeLinecap="round"/>
+          <text x="24" y="32" fontSize="10" fontWeight="bold" fill="#757575" textAnchor="middle" fontFamily="Arial">EMPTY</text>
         </svg>
       )
     },

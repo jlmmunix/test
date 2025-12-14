@@ -69,6 +69,19 @@ const BatchImprovedIcons = () => {
       )
     },
     {
+      id: 'start-play',
+      name: 'START_PLAY.png',
+      label: 'Start / Play',
+      svg: (
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <circle cx="24" cy="24" r="22" fill="#66BB6A"/>
+          <circle cx="24" cy="24" r="18" fill="#81C784"/>
+          <path d="M18 12 L36 24 L18 36 Z" fill="white"/>
+        </svg>
+      )
+    },
+    {
       id: 'company-devices',
       name: 'COMPANY_DEVICES.png',
       label: 'Company Devices',
@@ -376,15 +389,14 @@ const BatchImprovedIcons = () => {
     {
       id: 'empty',
       name: 'EMPTY.png',
-      label: 'Empty',
+      label: 'Empty / No Data',
       svg: (
-        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" fill="transparent"/>
-          <rect x="10" y="7" width="20" height="26" rx="2" fill="white"/>
-          <line x1="13" y1="12" x2="27" y2="12" stroke="#BDBDBD" strokeWidth="2"/>
-          <line x1="13" y1="17" x2="27" y2="17" stroke="#BDBDBD" strokeWidth="2"/>
-          <line x1="13" y1="22" x2="27" y2="22" stroke="#BDBDBD" strokeWidth="2"/>
-          <line x1="13" y1="27" x2="24" y2="27" stroke="#BDBDBD" strokeWidth="2"/>
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <path d="M4 14 L4 40 L44 40 L44 14 L28 14 L24 10 L4 10 Z" fill="none" stroke="#BDBDBD" strokeWidth="3" strokeDasharray="4 4"/>
+          <circle cx="24" cy="27" r="12" fill="none" stroke="#9E9E9E" strokeWidth="3"/>
+          <line x1="16" y1="19" x2="32" y2="35" stroke="#9E9E9E" strokeWidth="3" strokeLinecap="round"/>
+          <text x="24" y="32" fontSize="10" fontWeight="bold" fill="#757575" textAnchor="middle" fontFamily="Arial">EMPTY</text>
         </svg>
       )
     },
@@ -580,30 +592,34 @@ const BatchImprovedIcons = () => {
     {
       id: 'refresh-reload',
       name: 'REFRESH_RELOAD.png',
-      label: 'Refresh Reload',
+      label: 'Refresh / Reload',
       svg: (
-        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" fill="transparent"/>
-          <path d="M32 12 L32 6 L26 6" stroke="#42A5F5" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M8 28 L8 34 L14 34" stroke="#42A5F5" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-          <path d="M32 6 C32 6 26 10 20 10 C12 10 6 16 6 24 C6 28 8 32 8 34" stroke="#42A5F5" strokeWidth="3" fill="none" strokeLinecap="round"/>
-          <path d="M8 34 C8 34 14 30 20 30 C28 30 34 24 34 16 C34 12 32 8 32 6" stroke="#42A5F5" strokeWidth="3" fill="none" strokeLinecap="round"/>
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <circle cx="24" cy="24" r="20" fill="none" stroke="#42A5F5" strokeWidth="4"/>
+          <path d="M24 4 L24 10" stroke="#42A5F5" strokeWidth="4" strokeLinecap="round"/>
+          <path d="M18 8 L24 4 L30 8" fill="#42A5F5"/>
+          <path d="M24 38 L24 44" stroke="#42A5F5" strokeWidth="4" strokeLinecap="round"/>
+          <path d="M18 40 L24 44 L30 40" fill="#42A5F5"/>
+          <path d="M38 16 C38 16 36 12 32 10" stroke="#1976D2" strokeWidth="3.5" strokeLinecap="round"/>
+          <path d="M10 32 C10 32 12 36 16 38" stroke="#1976D2" strokeWidth="3.5" strokeLinecap="round"/>
         </svg>
       )
     },
     {
       id: 'sync-refresh',
       name: 'SYNC_REFRESH.png',
-      label: 'Sync Refresh',
+      label: 'Sync / Update',
       svg: (
-        <svg width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
-          <rect width="40" height="40" fill="transparent"/>
-          <circle cx="20" cy="20" r="16" fill="#66BB6A"/>
-          <circle cx="20" cy="20" r="12" fill="#81C784"/>
-          <path d="M20 8 C28 8 32 12 32 20" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round"/>
-          <path d="M28 8 L32 12 L28 16" fill="white"/>
-          <path d="M20 32 C12 32 8 28 8 20" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round"/>
-          <path d="M12 32 L8 28 L12 24" fill="white"/>
+        <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="48" fill="transparent"/>
+          <circle cx="24" cy="24" r="20" fill="#66BB6A"/>
+          <circle cx="24" cy="24" r="15" fill="#81C784"/>
+          <path d="M24 9 C30 9 35 12 38 17" stroke="white" strokeWidth="4" strokeLinecap="round" fill="none"/>
+          <path d="M34 10 L38 17 L31 17 Z" fill="white"/>
+          <path d="M24 39 C18 39 13 36 10 31" stroke="white" strokeWidth="4" strokeLinecap="round" fill="none"/>
+          <path d="M14 38 L10 31 L17 31 Z" fill="white"/>
+          <path d="M19 24 L22 27 L29 20" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
       )
     },
@@ -769,17 +785,16 @@ const BatchImprovedIcons = () => {
       svg: (
         <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" fill="transparent"/>
-          <rect x="4" y="6" width="20" height="16" rx="1.5" fill="#66B2FF"/>
-          <rect x="6" y="8" width="16" height="11" fill="#42A5F5"/>
-          <rect x="10" y="22" width="8" height="1.5" fill="#1976D2"/>
-          <rect x="12" y="23.5" width="4" height="2" rx="1" fill="#1976D2"/>
-          <rect x="28" y="8" width="16" height="28" rx="2.5" fill="#AB47BC"/>
-          <rect x="30" y="11" width="12" height="20" fill="#CE93D8"/>
-          <circle cx="36" cy="34" r="2" fill="white"/>
-          <rect x="10" y="32" width="8" height="6" rx="1" fill="#66BB6A"/>
-          <rect x="11" y="33" width="6" height="4" fill="#81C784"/>
-          <line x1="22" y1="32" x2="22" y2="38" stroke="#4DD0E1" strokeWidth="2"/>
-          <line x1="19" y1="35" x2="25" y2="35" stroke="#4DD0E1" strokeWidth="2"/>
+          <rect x="4" y="8" width="18" height="14" rx="1.5" fill="#66B2FF" stroke="#1976D2" strokeWidth="2"/>
+          <rect x="6" y="10" width="14" height="10" fill="#E3F2FD"/>
+          <rect x="9" y="22" width="8" height="1" fill="#1976D2"/>
+          <rect x="10" y="23" width="6" height="2" rx="0.5" fill="#1976D2"/>
+          <rect x="26" y="6" width="14" height="20" rx="2" fill="#AB47BC" stroke="#7B1FA2" strokeWidth="2"/>
+          <rect x="28" y="9" width="10" height="14" fill="#E1BEE7"/>
+          <circle cx="33" cy="24" r="1.5" fill="white"/>
+          <rect x="18" y="28" width="10" height="16" rx="2" fill="#FF9800" stroke="#F57C00" strokeWidth="2"/>
+          <rect x="20" y="31" width="6" height="10" fill="#FFE0B2"/>
+          <circle cx="23" cy="42" r="1" fill="white"/>
         </svg>
       )
     },
@@ -790,27 +805,24 @@ const BatchImprovedIcons = () => {
       svg: (
         <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" fill="transparent"/>
-          <g>
-            <rect x="2" y="2" width="44" height="13" rx="2" fill="#FF9800"/>
-            <circle cx="8" cy="8.5" r="3" fill="#66BB6A"/>
-            <circle cx="15" cy="8.5" r="3" fill="#EF5350"/>
-            <circle cx="22" cy="8.5" r="3" fill="#FFEB3B"/>
-            <text x="30" y="12" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial">SERVER</text>
-          </g>
-          <g>
-            <rect x="2" y="17" width="44" height="13" rx="2" fill="#FF9800"/>
-            <circle cx="8" cy="23.5" r="3" fill="#66BB6A"/>
-            <circle cx="15" cy="23.5" r="3" fill="#66BB6A"/>
-            <circle cx="22" cy="23.5" r="3" fill="#66BB6A"/>
-            <text x="30" y="27" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial">SERVER</text>
-          </g>
-          <g>
-            <rect x="2" y="32" width="44" height="13" rx="2" fill="#FF9800"/>
-            <circle cx="8" cy="38.5" r="3" fill="#66BB6A"/>
-            <circle cx="15" cy="38.5" r="3" fill="#66BB6A"/>
-            <circle cx="22" cy="38.5" r="3" fill="#66BB6A"/>
-            <text x="30" y="42" fontSize="9" fontWeight="bold" fill="white" fontFamily="Arial">SERVER</text>
-          </g>
+          <rect x="6" y="4" width="36" height="12" rx="2" fill="#42A5F5" stroke="#1976D2" strokeWidth="2"/>
+          <circle cx="11" cy="10" r="2" fill="#66BB6A"/>
+          <circle cx="17" cy="10" r="2" fill="#66BB6A"/>
+          <circle cx="23" cy="10" r="2" fill="#FFEB3B"/>
+          <line x1="30" y1="8" x2="38" y2="8" stroke="white" strokeWidth="2"/>
+          <line x1="30" y1="12" x2="38" y2="12" stroke="white" strokeWidth="2"/>
+          <rect x="6" y="18" width="36" height="12" rx="2" fill="#42A5F5" stroke="#1976D2" strokeWidth="2"/>
+          <circle cx="11" cy="24" r="2" fill="#66BB6A"/>
+          <circle cx="17" cy="24" r="2" fill="#66BB6A"/>
+          <circle cx="23" cy="24" r="2" fill="#66BB6A"/>
+          <line x1="30" y1="22" x2="38" y2="22" stroke="white" strokeWidth="2"/>
+          <line x1="30" y1="26" x2="38" y2="26" stroke="white" strokeWidth="2"/>
+          <rect x="6" y="32" width="36" height="12" rx="2" fill="#42A5F5" stroke="#1976D2" strokeWidth="2"/>
+          <circle cx="11" cy="38" r="2" fill="#66BB6A"/>
+          <circle cx="17" cy="38" r="2" fill="#66BB6A"/>
+          <circle cx="23" cy="38" r="2" fill="#66BB6A"/>
+          <line x1="30" y1="36" x2="38" y2="36" stroke="white" strokeWidth="2"/>
+          <line x1="30" y1="40" x2="38" y2="40" stroke="white" strokeWidth="2"/>
         </svg>
       )
     },
@@ -909,17 +921,15 @@ const BatchImprovedIcons = () => {
     {
       id: 'open-deploying-pc',
       name: 'open_deploying_pc.png',
-      label: 'Deploy PC',
+      label: 'Upload / Deploy',
       svg: (
         <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
           <rect width="48" height="48" fill="transparent"/>
-          <rect x="4" y="8" width="40" height="26" rx="2" fill="#66B2FF"/>
-          <rect x="6" y="10" width="36" height="20" fill="#42A5F5"/>
-          <rect x="16" y="34" width="16" height="2" fill="#1976D2"/>
-          <rect x="10" y="36" width="28" height="2" rx="1" fill="#1976D2"/>
-          <circle cx="24" cy="20" r="8" fill="#66BB6A"/>
-          <path d="M24 16 L24 24 M20 20 L28 20" stroke="white" strokeWidth="3.5" strokeLinecap="round"/>
-          <path d="M18 12 L24 6 L30 12" stroke="#4DD0E1" strokeWidth="3" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+          <path d="M12 28 C8 28 6 25 6 22 C6 19 8 16 12 16 C12 11 16 8 20 8 C24 8 28 11 28 16 C32 16 34 19 34 22 C34 25 32 28 28 28" fill="#66B2FF" stroke="#1976D2" strokeWidth="2"/>
+          <rect x="19" y="24" width="10" height="20" rx="1" fill="#1976D2"/>
+          <path d="M14 28 L24 18 L34 28" fill="#66BB6A" stroke="#43A047" strokeWidth="2" strokeLinejoin="round"/>
+          <circle cx="24" cy="18" r="3" fill="#66BB6A"/>
+          <rect x="8" y="40" width="32" height="4" rx="2" fill="#1976D2"/>
         </svg>
       )
     },
