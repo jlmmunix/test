@@ -1,6 +1,6 @@
 # Batch Improved Icons
 
-A collection of 30 professionally designed icons with a modern, clean aesthetic. Each icon is available in both SVG and PNG formats.
+A collection of 38 professionally designed icons with a modern, clean aesthetic. Each icon is available in both SVG and PNG formats.
 
 ## 📦 What's Included
 
@@ -44,8 +44,15 @@ A collection of 30 professionally designed icons with a modern, clean aesthetic.
 | Monitor Display | `MONITOR_DISPLAY.png` | Simple blue monitor display |
 | Monitor Plus | `MONITOR_PLUS.png` | Monitor with add/new icon |
 | Receipt | `RECEIPT.png` | Receipt/invoice with itemized rows |
+| Analytics Globe | `ANALYTICS_GLOBE.png` | World globe with analytics chart |
+| Calculator | `CALCULATOR.png` | Blue calculator with number pad |
+| Keyboard Coding | `KEYBOARD_CODING.png` | Keyboard with coding screen |
+| Mobile Devices | `MOBILE_DEVICES.png` | Two mobile phones side by side |
+| Monitor Ruler | `MONITOR_RULER.png` | Green monitor with measurement ruler |
+| Phone Call | `PHONE_CALL.png` | Phone with call notification |
 | Small Sparkle | `SPARKLE_SMALL.png` | Compact yellow sparkle |
 | Sparkle | `SPARKLE.png` | Large white sparkle with glow |
+| WiFi Signal | `WIFI_SIGNAL.png` | Green WiFi connectivity icon |
 
 ## 🚀 Quick Start
 
@@ -210,4 +217,4 @@ Each icon follows this structure:
 
 **Created**: December 2025  
 **Version**: 1.0  
-**Total Icons**: 30
+**Total Icons**: 38
