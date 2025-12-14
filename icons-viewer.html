@@ -483,10 +483,22 @@
                 </div>
                 <div class="icon-label">${icon.label}</div>
                 <div class="button-group">
-                    <button class="btn-png" onclick="downloadPNG(\`${icon.svg.replace(/`/g, '\\`')}\`, '${icon.name}')">PNG</button>
-                    <button class="btn-svg" onclick="downloadSVG(\`${icon.svg.replace(/`/g, '\\`')}\`, '${icon.name.replace('.png', '.svg')}')">SVG</button>
+                    <button class="btn-png">PNG</button>
+                    <button class="btn-svg">SVG</button>
                 </div>
             `;
+            
+            // Add event listeners properly to avoid quote escaping issues
+            const pngBtn = card.querySelector('.btn-png');
+            const svgBtn = card.querySelector('.btn-svg');
+            
+            pngBtn.addEventListener('click', () => {
+                downloadPNG(icon.svg, icon.name);
+            });
+            
+            svgBtn.addEventListener('click', () => {
+                downloadSVG(icon.svg, icon.name.replace('.png', '.svg'));
+            });
             
             grid.appendChild(card);
         });
