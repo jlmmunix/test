@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unix Deploy Tool - Redesigned UI</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Primary Palette - Deep Navy Theme */
+            --bg-primary: #0d1117;
+            --bg-secondary: #161b22;
+            --bg-tertiary: #21262d;
+            --bg-elevated: #30363d;
+            
+            /* Accent Colors - Carefully Curated */
+            --accent-blue: #58a6ff;
+            --accent-green: #3fb950;
+            --accent-orange: #d29922;
+            --accent-red: #f85149;
+            --accent-purple: #a371f7;
+            --accent-cyan: #56d4dd;
+            
+            /* Text Colors */
+            --text-primary: #e6edf3;
+            --text-secondary: #8b949e;
+            --text-muted: #6e7681;
+            
+            /* Borders */
+            --border-default: #30363d;
+            --border-muted: #21262d;
+            
+            /* Sidebar */
+            --sidebar-bg: #0d1117;
+            --sidebar-hover: rgba(88, 166, 255, 0.1);
+            --sidebar-active: rgba(88, 166, 255, 0.15);
+            
+            /* Action Button Colors - Harmonized */
+            --btn-info: #388bfd;
+            --btn-terminal: #238636;
+            --btn-upload: #1f6feb;
+            --btn-move: #8957e5;
+            --btn-ssh: #3fb950;
+            --btn-sync: #56d4dd;
+            --btn-ftp: #d29922;
+            --btn-rdp: #da3633;
+            --btn-refresh: #a371f7;
+            --btn-power: #f85149;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        .app-container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        /* Left Sidebar */
+        .sidebar {
+            width: 56px;
+            background: var(--sidebar-bg);
+            border-right: 1px solid var(--border-default);
+            display: flex;
+            flex-direction: column;
+            padding: 8px 0;
+        }
+
+        .sidebar-item {
+            width: 40px;
+            height: 40px;
+            margin: 4px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .sidebar-item:hover {
+            background: var(--sidebar-hover);
+        }
+
+        .sidebar-item.active {
+            background: var(--sidebar-active);
+        }
+
+        .sidebar-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--text-secondary);
+        }
+
+        .sidebar-item.active svg,
+        .sidebar-item:hover svg {
+            color: var(--accent-blue);
+        }
+
+        .sidebar-item.danger svg {
+            color: var(--accent-red);
+        }
+
+        .sidebar-item .shortcut {
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+            font-size: 8px;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .sidebar-divider {
+            height: 1px;
+            background: var(--border-default);
+            margin: 8px 8px;
+        }
+
+        .sidebar-spacer {
+            flex: 1;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-default);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .top-bar-icons {
+            display: flex;
+            gap: 8px;
+            padding: 8px 12px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+        }
+
+        .top-icon {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: transparent;
+        }
+
+        .top-icon:hover {
+            background: var(--bg-elevated);
+        }
+
+        .top-icon svg {
+            width: 18px;
+            height: 18px;
+            color: var(--text-secondary);
+        }
+
+        .top-icon .badge {
+            font-size: 9px;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Control Bar */
+        .control-bar {
+            background: var(--bg-secondary);
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-bottom: 1px solid var(--border-default);
+        }
+
+        .search-tag {
+            display: flex;
+            align-items: center;
+            background: var(--accent-blue);
+            color: var(--bg-primary);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            gap: 8px;
+        }
+
+        .search-tag .close {
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+        }
+
+        .search-tag .close:hover {
+            opacity: 1;
+        }
+
+        .dropdown {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-default);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: var(--text-primary);
+            font-size: 13px;
+            font-family: 'JetBrains Mono', monospace;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown:hover {
+            border-color: var(--accent-blue);
+            background: var(--bg-elevated);
+        }
+
+        .dropdown svg {
+            width: 14px;
+            height: 14px;
+            color: var(--text-muted);
+        }
+
+        .search-input-wrapper {
+            flex: 1;
+            max-width: 300px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border-default);
+            border-radius: 8px;
+            padding: 8px 12px 8px 36px;
+            color: var(--text-primary);
+            font-size: 13px;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Device Row */
+        .device-row {
+            background: var(--bg-tertiary);
+            margin: 12px 16px;
+            border-radius: 10px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid var(--border-default);
+        }
+
+        .device-info {
+            flex: 1;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .device-info .ip {
+            color: var(--accent-cyan);
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 6px;
+        }
+
+        .action-btn {
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .action-btn svg {
+            width: 16px;
+            height: 16px;
+            color: white;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .action-btn.info { background: var(--btn-info); }
+        .action-btn.terminal { background: var(--btn-terminal); }
+        .action-btn.upload { background: var(--btn-upload); }
+        .action-btn.move { background: var(--btn-move); }
+        .action-btn.ssh { background: var(--btn-ssh); }
+        .action-btn.sync { background: var(--btn-sync); }
+        .action-btn.ftp { background: var(--btn-ftp); }
+        .action-btn.rdp { background: var(--btn-rdp); }
+        .action-btn.refresh { background: var(--btn-refresh); }
+        .action-btn.power { background: var(--btn-power); }
+
+        .device-name {
+            background: var(--bg-elevated);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 12px;
+            color: var(--accent-green);
+            border: 1px solid var(--border-default);
+        }
+
+        /* Main Panel */
+        .main-panel {
+            flex: 1;
+            background: var(--bg-primary);
+            margin: 0 16px 16px;
+            border-radius: 12px;
+            border: 1px solid var(--border-default);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .panel-header {
+            background: var(--bg-secondary);
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-default);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .panel-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .panel-title .dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .panel-content {
+            padding: 20px;
+            height: calc(100% - 48px);
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #0a0e13 100%);
+        }
+
+        .empty-state {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+        }
+
+        .empty-state svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 16px;
+            opacity: 0.3;
+        }
+
+        .empty-state p {
+            font-size: 14px;
+        }
+
+        /* Status Bar */
+        .status-bar {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border-default);
+            padding: 6px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .status-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent-green);
+        }
+
+        /* Color Palette Display */
+        .color-palette {
+            position: fixed;
+            bottom: 60px;
+            right: 20px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-default);
+            border-radius: 12px;
+            padding: 16px;
+            width: 280px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+        }
+
+        .palette-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .palette-section {
+            margin-bottom: 12px;
+        }
+
+        .palette-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .palette-colors {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+
+        .palette-color {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .palette-color:hover {
+            transform: scale(1.1);
+        }
+
+        .hex-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 9px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-item active">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9,22 9,12 15,12 15,22"/>
+                </svg>
+                <span class="shortcut">^H</span>
+            </div>
+            <div class="sidebar-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <path d="M8 21h8"/>
+                    <path d="M12 17v4"/>
+                </svg>
+                <span class="shortcut">^M</span>
+            </div>
+            <div class="sidebar-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7"/>
+                    <rect x="14" y="3" width="7" height="7"/>
+                    <rect x="3" y="14" width="7" height="7"/>
+                    <rect x="14" y="14" width="7" height="7"/>
+                </svg>
+                <span class="shortcut">F2</span>
+            </div>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="4" width="16" height="16" rx="2"/>
+                    <rect x="9" y="9" width="6" height="6"/>
+                </svg>
+                <span class="shortcut">^D</span>
+            </div>
+            <div class="sidebar-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M12 2v4"/>
+                    <path d="M12 18v4"/>
+                    <path d="M4.93 4.93l2.83 2.83"/>
+                    <path d="M16.24 16.24l2.83 2.83"/>
+                    <path d="M2 12h4"/>
+                    <path d="M18 12h4"/>
+                </svg>
+                <span class="shortcut">^G</span>
+            </div>
+            <div class="sidebar-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <circle cx="12" cy="12" r="4"/>
+                    <line x1="4.93" y1="4.93" x2="9.17" y2="9.17"/>
+                    <line x1="14.83" y1="14.83" x2="19.07" y2="19.07"/>
+                </svg>
+                <span class="shortcut">^P</span>
+            </div>
+            <div class="sidebar-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                    <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span class="shortcut">^U</span>
+            </div>
+            <div class="sidebar-divider"></div>
+            <div class="sidebar-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="8" r="5"/>
+                    <path d="M20 21a8 8 0 0 0-16 0"/>
+                </svg>
+                <span class="shortcut">F4</span>
+            </div>
+            <div class="sidebar-spacer"></div>
+            <div class="sidebar-item danger">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+                <span class="shortcut">ESC</span>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <div class="top-bar-icons">
+                    <div class="top-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                        </svg>
+                    </div>
+                    <div class="top-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23,4 23,10 17,10"/>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                        </svg>
+                    </div>
+                    <div class="top-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 8v8"/>
+                            <path d="M8 12h8"/>
+                        </svg>
+                    </div>
+                    <div class="top-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                        </svg>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Control Bar -->
+            <div class="control-bar">
+                <div class="search-tag">
+                    Search devices for process deployment
+                    <span class="close">✕</span>
+                </div>
+                <div class="dropdown">
+                    3900
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"/>
+                    </svg>
+                </div>
+                <div class="dropdown" style="flex: 1; max-width: 280px;">
+                    <span style="color: var(--text-muted);">Select option...</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"/>
+                    </svg>
+                </div>
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                    <input type="text" class="search-input" placeholder="Search...">
+                </div>
+            </div>
+
+            <!-- Device Row -->
+            <div class="device-row">
+                <div class="dropdown" style="min-width: 320px;">
+                    Ryzen 9 3900 | Ubuntu | 23.10 (Mantic Minotaur)
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6,9 12,15 18,9"/>
+                    </svg>
+                </div>
+                <div class="device-info">
+                    (HARDWARE) <span class="ip">192.168.188.200:22</span> | LAN | 6
+                </div>
+                <div class="action-buttons">
+                    <button class="action-btn info" title="Info">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="12" y1="16" x2="12" y2="12"/>
+                            <line x1="12" y1="8" x2="12.01" y2="8"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn terminal" title="Terminal">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4,17 10,11 4,5"/>
+                            <line x1="12" y1="19" x2="20" y2="19"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn upload" title="Upload">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                            <polyline points="17,8 12,3 7,8"/>
+                            <line x1="12" y1="3" x2="12" y2="15"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn move" title="Move">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="5,9 2,12 5,15"/>
+                            <polyline points="9,5 12,2 15,5"/>
+                            <polyline points="15,19 12,22 9,19"/>
+                            <polyline points="19,9 22,12 19,15"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <line x1="12" y1="2" x2="12" y2="22"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn ssh" title="SSH">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4,17 10,11 4,5"/>
+                            <line x1="12" y1="19" x2="20" y2="19"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn sync" title="Sync">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23,4 23,10 17,10"/>
+                            <polyline points="1,20 1,14 7,14"/>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10"/>
+                            <path d="M20.49 15a9 9 0 0 1-14.85 3.36L1 14"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn ftp" title="FTP">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn rdp" title="RDP">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn refresh" title="Refresh">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="23,4 23,10 17,10"/>
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+                        </svg>
+                    </button>
+                    <button class="action-btn power" title="Power">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18.36 6.64a9 9 0 1 1-12.73 0"/>
+                            <line x1="12" y1="2" x2="12" y2="12"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="device-name">ID[1] Bashpedia</div>
+            </div>
+
+            <!-- Main Panel -->
+            <div class="main-panel">
+                <div class="panel-header">
+                    <span class="panel-title">
+                        <span class="dot"></span>
+                        Terminal Output
+                    </span>
+                </div>
+                <div class="panel-content">
+                    <div class="empty-state">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <polyline points="4,17 10,11 4,5"/>
+                            <line x1="12" y1="19" x2="20" y2="19"/>
+                        </svg>
+                        <p>Ready for deployment commands</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Status Bar -->
+            <footer class="status-bar">
+                <div class="status-item">
+                    <span class="status-dot"></span>
+                    Connected
+                </div>
+                <div class="status-item">
+                    192.168.188.200 • Port 22 • SSH
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Color Palette Reference -->
+    <div class="color-palette">
+        <div class="palette-title">Recommended Color Palette</div>
+        
+        <div class="palette-section">
+            <div class="palette-label">Backgrounds</div>
+            <div class="palette-colors">
+                <div>
+                    <div class="palette-color" style="background: #0d1117;"></div>
+                    <div class="hex-label">#0d1117</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #161b22;"></div>
+                    <div class="hex-label">#161b22</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #21262d;"></div>
+                    <div class="hex-label">#21262d</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #30363d;"></div>
+                    <div class="hex-label">#30363d</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="palette-section">
+            <div class="palette-label">Action Buttons</div>
+            <div class="palette-colors">
+                <div>
+                    <div class="palette-color" style="background: #388bfd;">i</div>
+                    <div class="hex-label">#388bfd</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #238636;">T</div>
+                    <div class="hex-label">#238636</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #8957e5;">M</div>
+                    <div class="hex-label">#8957e5</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #56d4dd;">S</div>
+                    <div class="hex-label">#56d4dd</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #d29922;">F</div>
+                    <div class="hex-label">#d29922</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #da3633;">R</div>
+                    <div class="hex-label">#da3633</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #a371f7;">↻</div>
+                    <div class="hex-label">#a371f7</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #f85149;">⏻</div>
+                    <div class="hex-label">#f85149</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="palette-section">
+            <div class="palette-label">Text Colors</div>
+            <div class="palette-colors">
+                <div>
+                    <div class="palette-color" style="background: #e6edf3; color: #0d1117;">1</div>
+                    <div class="hex-label">#e6edf3</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #8b949e;">2</div>
+                    <div class="hex-label">#8b949e</div>
+                </div>
+                <div>
+                    <div class="palette-color" style="background: #6e7681;">3</div>
+                    <div class="hex-label">#6e7681</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
